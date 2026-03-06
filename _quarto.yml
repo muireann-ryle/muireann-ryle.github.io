@@ -3,8 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "Muireann-Ryle"
+  title: Muireann Ryle
+  favicon: favicon.png
   navbar:
+    title: false
+    logo: Logo.png
     left:
       - href: index.qmd
         text: Home
@@ -12,9 +15,9 @@ website:
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: 
+      light: Lux 
+      dark: slate
     css: styles.css
     toc: true
 

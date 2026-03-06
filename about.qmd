@@ -1,5 +1,21 @@
 ---
-title: "About"
+title: "Muireann Ryle"
+image: me.png
+about:
+    template: solana
+    links:
+        - icon: linkedin
+          text: LinkedIn
+          href: https://www.linkedin.com/in/muireann-ryle-2797242a0/
+          target: _blank
+        - icon: github
+          text: GitHub
+          href: https://github.com/muireann-ryle
+          target: _blank
+        - icon: envelope
+          text: Email
+          href: mailto:muireann.ryle2@mail.dcu.ie
+
 ---
 
 About this site
