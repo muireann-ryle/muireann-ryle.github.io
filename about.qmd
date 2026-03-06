@@ -3,6 +3,7 @@ title: "Muireann Ryle"
 image: me.png
 about:
     template: solana
+    image-shape: round
     links:
         - icon: linkedin
           text: LinkedIn
