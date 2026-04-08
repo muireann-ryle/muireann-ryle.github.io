@@ -2,6 +2,6 @@
 title: "Muireann-Ryle"
 ---
 
-This is a Quarto website.
+Hello welcome to my E-Portfolio!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Here you will be able to read more about me, explore some of my projects, and access my CV.

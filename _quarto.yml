@@ -12,14 +12,16 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - Projects/index.qmd
 
 format:
   html:
     theme: 
-      light: Lux 
-      dark: slate
-    css: styles.css
+      - Lux 
+      - styles.scss
+    mainfont: Nunito
     toc: true
+    page-layout: full
 
 
 

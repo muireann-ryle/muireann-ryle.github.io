@@ -4,5 +4,23 @@
   },
   "index.qmd": {
     "index.html": "05aa0cbf"
+  },
+  "projects.qmd": {
+    "projects.html": "2e6977c3"
+  },
+  "Projects/index.qmd": {
+    "index.html": "0d91c55a"
+  },
+  "Projects/list/project_1.qmd": {
+    "project_1.html": "390ce89b"
+  },
+  "Projects/list/project_2.qmd": {
+    "project_2.html": "8d922188"
+  },
+  "Projects/list/project_3.qmd": {
+    "project_3.html": "8444897e"
+  },
+  "docs/Projects/index.qmd": {
+    "index.html": "13369eff"
   }
 }
