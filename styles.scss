@@ -46,7 +46,8 @@ body {
 }
 
 .name-title {
-  font-family: "Nunito", sans-serif;  
+  font-family: "Nunito", sans-serif;
+  text-align: center;  
   font-size: 3rem;
   font-weight: 900;
   letter-spacing: 3px;
@@ -56,6 +57,7 @@ body {
 
 .masters-subtitle {
   font-family: "Nunito", sans-serif;
+  text-align: center;
   font-size: 1.4rem;
   font-weight: 600;
   color: darken($navy-blue, 10%);
