@@ -1,7 +1,37 @@
 ---
-title: "Muireann-Ryle"
+title: ""
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: false
+page-layout: full
 ---
+<h1 class="name-title">Muireann Ryle</h1>
+<h2 class="masters-subtitle">MSc in Business Analytics</h2>
 
-Hello welcome to my E-Portfolio!
+<div class="welcome-section">
+<h2>Welcome to my E‑Portfolio</h2>
+<div class="welcome-accent"></div>
 
-Here you will be able to read more about me, explore some of my projects, and access my CV.
+<p>This site showcases my academic journey, technical projects, and reflections throughout the MSc in
+Business Analytics. </p>
+</div>
+---
+<div class="home-grid">
+
+<div class="home-card">
+<h2 class = "light-pink-text"> About Me </h2>
+<p>You can learn more [about me](about.qmd) and my academic background, skills, and interests.</p>
+
+</div>
+
+<div class="home-card">
+<h2 class = "light-pink-text"> My Projects </h2>
+<p>A collection of [my projects](Projects/) including coursework and analytics challenge based learning projects are available to explore.</p>
+
+</div>
+
+</div>
+

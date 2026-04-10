@@ -11,8 +11,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - Projects/index.qmd
+      - href: about.qmd
+        text: About
+      - href: Projects/index.qmd
+        text: Projects
 
 format:
   html:
@@ -24,4 +26,6 @@ format:
     page-layout: full
 
 
-
+footer: |
+  © 2025 Muireann Ryle · MSc Business Analytics, DCU  
+  [LinkedIn](https://www.linkedin.com) · [GitHub](https://github.com) · [Email](mailto:your@email.com)

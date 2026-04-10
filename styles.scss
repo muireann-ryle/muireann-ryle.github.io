@@ -7,6 +7,7 @@
 $cream: #FDFBF7;
 $light-pink: #F9C5D5;
 $navy-blue: #2C3E50;
+$light-blue: #99c9f4;
 
 // Base document colors
 $navbar-bg: $light-pink;
@@ -24,6 +25,9 @@ h1, h2 {
     color: $navy-blue;
 }
 
+.subtitle {
+    color: $light-blue;
+}
 .center-text {
     text-align: center;
 }
@@ -35,4 +39,71 @@ h1, h2 {
 .navbar-brand img {
     max-height: 40px;
     width: auto;
+}
+
+body {
+  background-color: #FDF1F5;
+}
+
+.name-title {
+  font-family: "Nunito", sans-serif;  
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: $navy-blue;
+  margin-bottom: 5px;
+}
+
+.masters-subtitle {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: darken($navy-blue, 10%);
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.home-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto;
+}
+.welcome-section {
+  text-align: center;
+  max-width: 750px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+}
+
+.welcome-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: $navy-blue;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #444;
+  margin-top: 10px;
+}
+
+.welcome-accent {
+  width: 60px;
+  height: 4px;
+  background-color: $light-pink;
+  margin: 15px auto 25px auto;
+  border-radius: 2px;
 }
