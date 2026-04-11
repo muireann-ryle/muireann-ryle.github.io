@@ -15,6 +15,15 @@ website:
         text: About
       - href: Projects/index.qmd
         text: Projects
+  page-footer:
+  left: "Copyright © 2026 Muireann Ryle"
+  right:
+   - icon: github
+     href: https://github.com/muireann-ryle
+   - icon: linkedin
+     href: https://www.linkedin.com/in/muireann-ryle-2797242a0/
+   - icon: envelope
+     href: mailto:muireann.ryle2@mail.dcu.ie
 
 format:
   html:
@@ -26,6 +35,8 @@ format:
     page-layout: full
 
 
-footer: |
-  © 2025 Muireann Ryle · MSc Business Analytics, DCU  
-  [LinkedIn](https://www.linkedin.com) · [GitHub](https://github.com) · [Email](mailto:your@email.com)
+
+
+
+  
+
