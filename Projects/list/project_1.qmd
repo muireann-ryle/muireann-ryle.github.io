@@ -1,7 +1,7 @@
 ---
-title: Project 1
-subtitle: My first Project
-author: Muireann
+title: BERT vs GenAI for Sentiment Analysis 
+subtitle: Comparing a BERT and GenAI model on a Starbucks customer feedback dataset for sentiment analysis
+author: Muireann Ryle
 ---
 
 ##test

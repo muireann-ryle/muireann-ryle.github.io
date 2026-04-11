@@ -25,26 +25,26 @@
     "href": "Projects/index.html",
     "title": "My Projects",
     "section": "",
-    "text": "Project 1\n\n\nMy first Project\n\n\n\n\n\n\n\n\nMuireann\n\n\n\n\n\n\n\n\n\n\n\n\nProject 2\n\n\nMy Second Project\n\n\n\n\n\n\n\n\nMuireann\n\n\n\n\n\n\n\n\n\n\n\n\nProject 3\n\n\nMy third Project\n\n\n\n\n\n\n\n\nMuireann\n\n\n\n\n\nNo matching items"
+    "text": "BERT vs GenAI for Sentiment Analysis\n\n\nComparing a BERT and GenAI model on a Starbucks customer feedback dataset for sentiment analysis\n\n\n\n\n\n\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nExamining Happiness in African and Western-European cultures through Measurement Non-Equivalence techniques and interpreting Effect Sizes\n\n\nUsing R-Studio to examine psychological happiness tests\n\n\n\n\n\n\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying Fraud\n\n\nAn analysis of fraud detection using statistical tools and techniques\n\n\n\n\n\n\n\n\nMuireann Ryle\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Projects/list/project_1.html",
     "href": "Projects/list/project_1.html",
-    "title": "Project 1",
+    "title": "BERT vs GenAI for Sentiment Analysis",
     "section": "",
     "text": "##test"
   },
   {
     "objectID": "Projects/list/project_2.html",
     "href": "Projects/list/project_2.html",
-    "title": "Project 2",
+    "title": "Identifying Fraud",
     "section": "",
     "text": "##test2"
   },
   {
     "objectID": "Projects/list/project_3.html",
     "href": "Projects/list/project_3.html",
-    "title": "Project 3",
+    "title": "Examining Happiness in African and Western-European cultures through Measurement Non-Equivalence techniques and interpreting Effect Sizes",
     "section": "",
     "text": "##test3"
   }
