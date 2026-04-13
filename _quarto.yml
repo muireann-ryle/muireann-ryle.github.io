@@ -15,6 +15,10 @@ website:
         text: About
       - href: Projects/index.qmd
         text: Projects
+    right:
+      - href: cv.pdf
+        text: CV
+        target: _blank
   page-footer:
    left: "Copyright © 2026 Muireann Ryle"
    right:
