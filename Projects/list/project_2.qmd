@@ -4,4 +4,30 @@ subtitle: An analysis of fraud detection using statistical tools and techniques
 author: Muireann Ryle
 ---
 
-##test2
+This project examined an artificial dataset of 500 transactions where 246 were fraudulent, and 254 were not.
+There were 23 variables, 11 of which were categorical. I used a mixture of Python and PowerBI to perform
+Exploratory Data Analysis (EDA) and build a predictor for fraud amount.
+
+The first step taken consisted of preparing the data for EDA. This included **data normalisation**, 
+calculating the **interquartile range (IQR)**, identifying **outliers**, and creating **z-scores**.
+```{.python} 
+# Compute z-scores
+z_scores = (fraud_df[cols] - fraud_df[cols].mean()) / fraud_df[cols].std()
+
+# Add to original DataFrame
+fraud_df_z = fraud_df.copy()
+fraud_df_z[[f'{col}_z' for col in cols]] = z_scores
+
+#IQR
+Q1 = fraud_df['transaction_amount'].quantile(0.25)
+Q3 = fraud_df['transaction_amount'].quantile(0.75)
+IQR = Q3 - Q1
+
+# Define bounds
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+# Flag outliers
+outliers_iqr = fraud_df[(fraud_df['transaction_amount'] < lower_bound) | (fraud_df['transaction_amount'] > upper_bound)]
+print(outliers_iqr[['transaction_amount', 'is_fraud']])
+```

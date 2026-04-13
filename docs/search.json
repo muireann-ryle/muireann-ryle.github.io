@@ -39,7 +39,7 @@
     "href": "Projects/list/project_2.html",
     "title": "Identifying Fraud",
     "section": "",
-    "text": "##test2"
+    "text": "This project examined an artificial dataset of 500 transactions where 246 were fraudulent, and 254 were not. There were 23 variables, 11 of which were categorical. I used a mixture of Python and PowerBI to perform Exploratory Data Analysis (EDA) and build a predictor for fraud amount.\nThe first step taken consisted of preparing the data for EDA. This included data normalisation, calculating the interquartile range (IQR), identifying outliers, and creating z-scores.\n# Compute z-scores\nz_scores = (fraud_df[cols] - fraud_df[cols].mean()) / fraud_df[cols].std()\n\n# Add to original DataFrame\nfraud_df_z = fraud_df.copy()\nfraud_df_z[[f'{col}_z' for col in cols]] = z_scores\n\n#IQR\nQ1 = fraud_df['transaction_amount'].quantile(0.25)\nQ3 = fraud_df['transaction_amount'].quantile(0.75)\nIQR = Q3 - Q1\n\n# Define bounds\nlower_bound = Q1 - 1.5 * IQR\nupper_bound = Q3 + 1.5 * IQR\n\n# Flag outliers\noutliers_iqr = fraud_df[(fraud_df['transaction_amount'] &lt; lower_bound) | (fraud_df['transaction_amount'] &gt; upper_bound)]\nprint(outliers_iqr[['transaction_amount', 'is_fraud']])"
   },
   {
     "objectID": "Projects/list/project_3.html",
