@@ -25,7 +25,7 @@
     "href": "Projects/index.html",
     "title": "My Projects",
     "section": "",
-    "text": "BERT vs GenAI for Sentiment Analysis\n\n\nComparing a BERT and GenAI model on a Starbucks customer feedback dataset for sentiment analysis\n\n\n\n\n\n\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nExamining Happiness in African and Western-European cultures through Measurement Non-Equivalence techniques and interpreting Effect Sizes\n\n\nUsing R-Studio to examine psychological happiness tests\n\n\n\n\n\n\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying Fraud\n\n\nAn analysis of fraud detection using statistical tools and techniques\n\n\n\n\n\n\n\n\nMuireann Ryle\n\n\n\n\n\nNo matching items"
+    "text": "Examining Happiness Across Cultures\n\n\nMeasurement Non‑Equivalence & Effect Size Interpretation in African and Western‑European Countries\n\n\n\n\n\n\n\n\nMar 14, 2025\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying Fraud\n\n\nAn analysis of fraud detection using statistical tools and techniques\n\n\n\n\n\n\n\n\nNov 28, 2025\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nBERT vs GenAI for Sentiment Analysis\n\n\nComparing a BERT and GenAI model on a Starbucks customer feedback dataset for sentiment analysis\n\n\n\n\n\n\n\n\nMuireann Ryle\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Projects/list/project_1.html",
@@ -44,9 +44,9 @@
   {
     "objectID": "Projects/list/project_3.html",
     "href": "Projects/list/project_3.html",
-    "title": "Examining Happiness in African and Western-European cultures through Measurement Non-Equivalence techniques and interpreting Effect Sizes",
+    "title": "Examining Happiness Across Cultures",
     "section": "",
-    "text": "##test3"
+    "text": "This project examined how happiness is measured across cultures, focusing specifically on African and Western‑European countries. Using the ISP Happiness dataset, the study applied measurement invariance techniques, confirmatory factor analysis (CFA), and effect size metrics (including dMACS, SDI2, UDI2, WSDI, WUDI) to determine whether two widely used happiness scales — the Subjective Happiness Scale (SHS) and Interdependent Happiness Scale (IHS) — function equivalently across cultures. The findings revealed substantial measurement bias, highlighting the need for more culturally appropriate happiness measures."
   },
   {
     "objectID": "Projects/list/project_2.html#data-preparation",
@@ -75,5 +75,75 @@
     "title": "Identifying Fraud",
     "section": "Reflection & Skills Developed",
     "text": "Reflection & Skills Developed\nThis project strengthened my ability to explore a data analytics project — from cleaning and preparing raw data to interpreting statistical outputs and communicating insights clearly. I became more confident in identifying which variables meaningfully contribute to predictive models and which do not, and I learned how to justify these decisions using statistical evidence rather than assumptions.\nWorking with both Python and Power BI helped me combine code‑driven analysis with visual exploration. Python allowed for precise statistical testing and modelling, while Power BI made it easier to spot patterns across demographic and behavioural variables. This dual approach improved my ability to validate insights using multiple methods."
+  },
+  {
+    "objectID": "Projects/list/project_3.html#overview",
+    "href": "Projects/list/project_3.html#overview",
+    "title": "Examining Happiness Across Cultures",
+    "section": "",
+    "text": "This project examined how happiness is measured across cultures, focusing specifically on African and Western‑European countries. Using the ISP Happiness dataset, the study applied measurement invariance techniques, confirmatory factor analysis (CFA), and effect size metrics (including dMACS, SDI2, UDI2, WSDI, WUDI) to determine whether two widely used happiness scales — the Subjective Happiness Scale (SHS) and Interdependent Happiness Scale (IHS) — function equivalently across cultures. The findings revealed substantial measurement bias, highlighting the need for more culturally appropriate happiness measures."
+  },
+  {
+    "objectID": "Projects/list/project_3.html#research-aim",
+    "href": "Projects/list/project_3.html#research-aim",
+    "title": "Examining Happiness Across Cultures",
+    "section": "Research Aim",
+    "text": "Research Aim\nTo determine whether the SHS and IHS measure happiness equivalently across African and Western‑European cultures, and to quantify the magnitude of measurement bias using modern effect size techniques."
+  },
+  {
+    "objectID": "Projects/list/project_3.html#dataset",
+    "href": "Projects/list/project_3.html#dataset",
+    "title": "Examining Happiness Across Cultures",
+    "section": "Dataset",
+    "text": "Dataset\nThe project used two publicly available datasets from the ISP Happiness study:\n\n4,122 participants from African and Western‑European countries\n\nAges 16–67 (M = 22.5, SD = 4.97)\n\nCountries included: Austria, Denmark, France, Germany, Greece, Netherlands, Norway, Portugal, Spain, Switzerland, UK, Kenya, Nigeria, Senegal, South Africa\n\nMeasures:\n\nSHS (4 items, 7‑point Likert)\nIHS (9 items, 5‑point Likert)\n\nAdditional country‑level variables (HDI, climate, population growth, etc.)\n\nSweden was excluded due to excessive missing data."
+  },
+  {
+    "objectID": "Projects/list/project_3.html#methodology",
+    "href": "Projects/list/project_3.html#methodology",
+    "title": "Examining Happiness Across Cultures",
+    "section": "Methodology",
+    "text": "Methodology\n\nData Preparation\n\nInspected for missing values and inconsistencies\n\nRemoved countries with insufficient sample sizes\n\nFiltered dataset to African and Western‑European regions\n\n\n\nConfirmatory Factor Analysis (CFA)\nCFA was used to test: - Configural invariance (same factor structure across groups)\n- Metric invariance (equal factor loadings across groups)\nFit indices included: - Chi‑Square\n- CFI\n- TLI\n- RMSEA\n- SRMR\n\n\nMeasurement Non‑Equivalence (MNE)\nTo quantify bias, the study used: - dMACS\n- SDI2 / UDI2\n- WSDI / WUDI\nThese metrics capture psychometric distance between cultures."
+  },
+  {
+    "objectID": "Projects/list/project_3.html#analysis-findings",
+    "href": "Projects/list/project_3.html#analysis-findings",
+    "title": "Examining Happiness Across Cultures",
+    "section": "Analysis & Findings",
+    "text": "Analysis & Findings\n\nHappiness Scores Differed Across Countries\nAfrican countries (e.g., Kenya, Senegal) showed higher SHS means than many Western‑European countries.\nExample from Table 2:\n- Kenya SHS Combined Mean = 5.347\n- Germany SHS Combined Mean = 4.691\n\n\nMeasurement Models Did Not Hold Equally Across Cultures\n\nConfigural invariance was inconsistent\n\nMetric invariance was often violated\n\nSHS and IHS items behaved differently across African vs Western‑European groups\n\n\n\nLarge Measurement Bias Detected\nEffect size metrics showed large psychometric distances between groups, indicating that individuals with the same latent happiness levels may score differently depending on their cultural group.\n\n\nImplications\n\nSHS and IHS may not be culturally neutral\n\nCross‑cultural comparisons of happiness may be misleading\n\nThere is a need for culturally adapted or newly developed happiness measures"
+  },
+  {
+    "objectID": "Projects/list/project_3.html#discussion",
+    "href": "Projects/list/project_3.html#discussion",
+    "title": "Examining Happiness Across Cultures",
+    "section": "Discussion",
+    "text": "Discussion\nThe study reinforces that happiness is not a universal construct and that Western‑developed measures (like SHS) may not capture the lived experiences of African cultures. Cultural factors such as collectivism, language, spirituality, and socio‑economic context influence how happiness is understood and expressed. The results align with prior research showing that SHS performs best in WEIRD countries, while IHS is more stable cross‑culturally. Your work extends this by quantifying how large these differences are."
+  },
+  {
+    "objectID": "Projects/list/project_3.html#limitations",
+    "href": "Projects/list/project_3.html#limitations",
+    "title": "Examining Happiness Across Cultures",
+    "section": "Limitations",
+    "text": "Limitations\n\nSecondary dataset (no control over item wording or sampling)\n\nUneven sample sizes across countries\n\nCFA models sensitive to large N\n\ndMACS interpretation guidelines still developing"
+  },
+  {
+    "objectID": "Projects/list/project_3.html#future-work",
+    "href": "Projects/list/project_3.html#future-work",
+    "title": "Examining Happiness Across Cultures",
+    "section": "Future Work",
+    "text": "Future Work\n\nDevelop culturally grounded happiness measures\n\nExplore qualitative approaches to define happiness in African contexts\n\nTest invariance using alternative models (e.g., IRT, Bayesian CFA)\n\nExpand analysis to additional global regions"
+  },
+  {
+    "objectID": "Projects/list/project_3.html#reflection",
+    "href": "Projects/list/project_3.html#reflection",
+    "title": "Examining Happiness Across Cultures",
+    "section": "Reflection",
+    "text": "Reflection\nThis project strengthened my ability to work with complex psychometric models and large cross‑cultural datasets. I gained experience in CFA, measurement invariance testing, and interpreting advanced effect size metrics. It also deepened my understanding of how cultural context shapes psychological constructs, reinforcing the importance of culturally sensitive measurement in global research."
+  },
+  {
+    "objectID": "Projects/list/project_3.html#skills-demonstrated",
+    "href": "Projects/list/project_3.html#skills-demonstrated",
+    "title": "Examining Happiness Across Cultures",
+    "section": "Skills Demonstrated",
+    "text": "Skills Demonstrated\n\n\n\nTechnical Skills\n\n\n\nR programming\n\n\nConfirmatory Factor Analysis (CFA)\n\n\nMeasurement invariance testing\n\n\nEffect size computation (dMACS, SDI2, UDI2, WSDI, WUDI)\n\n\nData cleaning & preprocessing\n\n\nStatistical reporting\n\n\n\n\n\nAnalytical Skills\n\n\n\nCross‑cultural comparison\n\n\nPsychometric evaluation\n\n\nInterpretation of model fit indices\n\n\nCritical evaluation of measurement bias\n\n\nInsight generation\n\n\nFeature interpretation\n\n\n\n\n\nProfessional Skills\n\n\n\nAcademic research writing\n\n\nSynthesising complex findings\n\n\nEthical handling of secondary data\n\n\nClear communication of statistical insights\n\n\nProject organisation & documentation"
   }
 ]

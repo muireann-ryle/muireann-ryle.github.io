@@ -1,5 +1,9 @@
 ---
 title: My Projects
-listing: default
+listing:
+  contents: /
+  sort: "date"
+  type: default
+  categories: false   
 ---
 

@@ -2,6 +2,8 @@
 title: Identifying Fraud
 subtitle: An analysis of fraud detection using statistical tools and techniques
 author: Muireann Ryle
+image: fraud-project.png
+date: "11/28/2025"
 ---
 
 This project analysed an artificial dataset of **500 customer transactions**, of which **246 were fraudulent** 

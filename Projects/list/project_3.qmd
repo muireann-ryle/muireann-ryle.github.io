@@ -1,7 +1,143 @@
 ---
-title: Examining Happiness in African and Western-European cultures through Measurement Non-Equivalence techniques and interpreting Effect Sizes
-subtitle: Using R-Studio to examine psychological happiness tests
+title: Examining Happiness Across Cultures
+subtitle: Measurement Non‑Equivalence & Effect Size Interpretation in African and Western‑European Countries
 author: Muireann Ryle
+date: "03/14/2025"
 ---
 
-##test3
+## Overview
+This project examined how happiness is measured across cultures, focusing specifically on African and
+Western‑European countries. Using the ISP Happiness dataset, the study applied **measurement invariance**
+techniques, **confirmatory factor analysis** (CFA), and **effect size metrics** (including dMACS, SDI2, UDI2, WSDI, WUDI) 
+to determine whether two widely used happiness scales — the Subjective Happiness Scale (SHS) and 
+Interdependent Happiness Scale (IHS) — function equivalently across cultures. The findings revealed 
+substantial **measurement bias**, highlighting the need for more **culturally appropriate** happiness 
+measures.
+
+## Research Aim
+To determine whether the SHS and IHS measure happiness equivalently across African and Western‑European 
+cultures, and to quantify the magnitude of measurement bias using modern effect size techniques.
+
+## Dataset
+The project used two publicly available datasets from the ISP Happiness study:
+
+- 4,122 participants from African and Western‑European countries  
+- Ages 16–67 (M = 22.5, SD = 4.97)  
+- Countries included: Austria, Denmark, France, Germany, Greece, Netherlands, Norway, Portugal, Spain, Switzerland, UK, Kenya, Nigeria, Senegal, South Africa  
+- Measures:
+  - **SHS** (4 items, 7‑point Likert)
+  - **IHS** (9 items, 5‑point Likert)
+- Additional country‑level variables (HDI, climate, population growth, etc.)
+
+Sweden was excluded due to excessive **missing data**.
+
+## Methodology
+
+### Data Preparation
+- Inspected for missing values and inconsistencies  
+- Removed countries with insufficient sample sizes  
+- Filtered dataset to African and Western‑European regions  
+
+### Confirmatory Factor Analysis (CFA)
+CFA was used to test:
+- Configural invariance (same factor structure across groups)  
+- Metric invariance (equal factor loadings across groups)  
+
+Fit indices included:
+- Chi‑Square  
+- CFI  
+- TLI  
+- RMSEA  
+- SRMR  
+
+### Measurement Non‑Equivalence (MNE)
+To quantify bias, the study used:
+- dMACS  
+- SDI2 / UDI2  
+- WSDI / WUDI  
+
+These metrics capture psychometric distance between cultures.
+
+## Analysis & Findings
+
+### Happiness Scores Differed Across Countries
+African countries (e.g., Kenya, Senegal) showed higher SHS means than many Western‑European countries.  
+Example from Table 2:  
+- Kenya SHS Combined Mean = **5.347**  
+- Germany SHS Combined Mean = **4.691**
+
+### Measurement Models Did Not Hold Equally Across Cultures
+- Configural invariance was inconsistent  
+- Metric invariance was often violated  
+- SHS and IHS items behaved differently across African vs Western‑European groups  
+
+### Large Measurement Bias Detected
+Effect size metrics showed large psychometric distances between groups, indicating that individuals 
+with the same latent happiness levels may score differently depending on their cultural group.
+
+### Implications
+- SHS and IHS may not be culturally neutral  
+- Cross‑cultural comparisons of happiness may be misleading  
+- There is a need for culturally adapted or newly developed happiness measures  
+
+## Discussion
+The study reinforces that happiness is not a universal construct and that Western‑developed measures (like SHS) may not capture the lived experiences of African cultures. Cultural factors such as collectivism, language, spirituality, and socio‑economic context influence how happiness is understood and expressed. The results align with prior research showing that SHS performs best in WEIRD countries, while IHS is more stable cross‑culturally. Your work extends this by quantifying how large these differences are.
+
+## Limitations
+- Secondary dataset (no control over item wording or sampling)  
+- Uneven sample sizes across countries  
+- CFA models sensitive to large N  
+- dMACS interpretation guidelines still developing  
+
+## Future Work
+- Develop culturally grounded happiness measures  
+- Explore qualitative approaches to define happiness in African contexts  
+- Test invariance using alternative models (e.g., IRT, Bayesian CFA)  
+- Expand analysis to additional global regions  
+
+## Reflection
+This project strengthened my ability to work with complex psychometric models and large cross‑cultural 
+datasets. I gained experience in CFA, measurement invariance testing, and interpreting advanced effect size metrics. It also deepened my understanding of how cultural context shapes psychological constructs, reinforcing the importance of culturally sensitive measurement in global research.
+
+
+## Skills Demonstrated
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>Technical Skills</h3>
+<ul>
+<li>R programming</li>
+<li>Confirmatory Factor Analysis (CFA)</li>
+<li>Measurement invariance testing</li>
+<li>Effect size computation (dMACS, SDI2, UDI2, WSDI, WUDI)</li>
+<li>Data cleaning & preprocessing</li>
+<li>Statistical reporting</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>Analytical Skills</h3>
+<ul>
+<li>Cross‑cultural comparison</li>
+<li>Psychometric evaluation</li>
+<li>Interpretation of model fit indices</li>
+<li>Critical evaluation of measurement bias</li>
+<li>Insight generation</li>
+<li>Feature interpretation</li>
+</ul>
+</div>
+
+<div class="skill-card">
+<h3>Professional Skills</h3>
+<ul>
+<li>Academic research writing</li>
+<li>Synthesising complex findings</li>
+<li>Ethical handling of secondary data</li>
+<li>Clear communication of statistical insights</li>
+<li>Project organisation & documentation</li>
+</ul>
+</div>
+
+</div>
+
