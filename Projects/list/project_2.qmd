@@ -2,7 +2,7 @@
 title: Identifying Fraud
 subtitle: An analysis of fraud detection using statistical tools and techniques
 author: Muireann Ryle
-image: fraud-project.png
+image: "/fraud-project.png"
 date: "11/28/2025"
 ---
 
