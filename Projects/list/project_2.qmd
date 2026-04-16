@@ -4,12 +4,20 @@ subtitle: An analysis of fraud detection using statistical tools and techniques
 author: Muireann Ryle
 ---
 
-This project examined an artificial dataset of 500 transactions where 246 were fraudulent, and 254 were not.
-There were 23 variables, 11 of which were categorical. I used a mixture of Python and PowerBI to perform
-Exploratory Data Analysis (EDA) and build a predictor for fraud amount.
+This project analysed an artificial dataset of **500 customer transactions**, of which **246 were fraudulent** 
+and **254 were not**. The dataset contained **23 variables** (11 categorical and 12 numerical), covering 
+customer demographics, financial indicators, and behavioural attributes. I used a combination of **Python** 
+and **Power BI** to perform exploratory data analysis (EDA), identify patterns associated with fraud, and
+build predictive models for fraud amount.
 
-The first step taken consisted of preparing the data for EDA. This included **data normalisation**, 
-calculating the **interquartile range (IQR)**, identifying **outliers**, and creating **z-scores**.
+## Data Preparation
+
+Before conducting EDA, I prepared the dataset by:
+
+- **Normalising continuous variables** using z-scores  
+- Calculating the **interquartile range (IQR)**  
+- Identifying **outliers** across key variables  
+- Creating additional transformed variables for analysis 
 ```{.python} 
 # Compute z-scores
 z_scores = (fraud_df[cols] - fraud_df[cols].mean()) / fraud_df[cols].std()
@@ -31,3 +39,81 @@ upper_bound = Q3 + 1.5 * IQR
 outliers_iqr = fraud_df[(fraud_df['transaction_amount'] < lower_bound) | (fraud_df['transaction_amount'] > upper_bound)]
 print(outliers_iqr[['transaction_amount', 'is_fraud']])
 ```
+## Exploratory Data Analysis
+
+EDA was conducted in both Power BI and Python to explore relationships between variables. One of the 
+strongest patterns emerged between **personal income** and **fraud cases**.
+
+The following code was used to create income brackets and compare fraud vs non‑fraud counts
+
+```{.python} 
+bins = [0, 20000, 40000, 60000, 80000, float('inf')]
+labels = ['<€20k', '€20k–€40k', '€40k–€60k', '€60k–€80k', '€80k+']
+fraud_df['income_bracket'] = pd.cut(fraud_df['personal_income'], bins=bins, labels=labels)
+
+income_grouped = fraud_df.groupby(['income_bracket', 'is_fraud']).size().unstack(fill_value=0)
+income_grouped.columns = ['Non-Fraud', 'Fraud']
+income_grouped['Total'] = income_grouped['Non-Fraud'] + income_grouped['Fraud']
+income_grouped['Fraud Rate'] = income_grouped['Fraud'] / income_grouped['Total']
+
+import matplotlib.pyplot as plt
+
+income_grouped[['Non-Fraud', 'Fraud']].plot(kind='bar', stacked=False, color=['blue', 'pink'])
+plt.title('Fraud vs Non-Fraud Transactions by Income Bracket')
+plt.xlabel('Income Bracket')
+plt.ylabel('Number of Transactions')
+plt.xticks(rotation=45)
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+## predictive Modelling 
+
+Two models were created to predict fraud amount, a **simple linear regression** model, and a
+**multiple linear regression model**. The multiple linear regression had only a minor improvement over 
+the simple linear regression which indicated minimal predictive power from the additional variables. 
+Transaction amount was the best predictor of fraud amount.
+
+
+```{.python} 
+import statsmodels.api as sm
+
+# Dependent variable (Y): fraud_amount
+Y = fraud_df['fraud_amount']
+
+# Independent variable (X): transaction_amount
+X = fraud_df['transaction_amount']
+
+# Add constant for intercept
+X = sm.add_constant(X)
+
+# Fit regression model
+model = sm.OLS(Y, X).fit()
+
+# Print summary
+print(model.summary())
+
+# Select multiple predictors
+X = fraud_df[['personal_income', 'family_income']]
+Y = fraud_df['fraud_amount']
+
+# Add constant for intercept
+X = sm.add_constant(X)
+
+# Fit the model
+model = sm.OLS(Y, X).fit()
+
+# Display summary
+print(model.summary())
+```
+## Reflection & Skills Developed
+This project strengthened my ability to explore a data analytics project — from **cleaning**
+and **preparing raw data** to **interpreting** statistical outputs and **communicating insights** clearly. 
+I became more confident in identifying which variables meaningfully contribute to **predictive models** 
+and which do not, and I learned how to justify these decisions using **statistical evidence** rather than 
+assumptions.
+
+Working with both **Python** and **Power BI** helped me combine **code‑driven analysis** with **visual 
+exploration**. Python allowed for precise statistical testing and modelling, while Power BI made it 
+easier to spot patterns across demographic and behavioural variables. This dual approach improved 
+my ability to **validate insights** using multiple methods.

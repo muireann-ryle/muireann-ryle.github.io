@@ -156,11 +156,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link active" data-scroll-target="#data-preparation">Data Preparation</a></li>
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
+  <li><a href="#predictive-modelling" id="toc-predictive-modelling" class="nav-link" data-scroll-target="#predictive-modelling">predictive Modelling</a></li>
+  <li><a href="#reflection-skills-developed" id="toc-reflection-skills-developed" class="nav-link" data-scroll-target="#reflection-skills-developed">Reflection &amp; Skills Developed</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -170,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -188,8 +197,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This project examined an artificial dataset of 500 transactions where 246 were fraudulent, and 254 were not. There were 23 variables, 11 of which were categorical. I used a mixture of Python and PowerBI to perform Exploratory Data Analysis (EDA) and build a predictor for fraud amount.</p>
-<p>The first step taken consisted of preparing the data for EDA. This included <strong>data normalisation</strong>, calculating the <strong>interquartile range (IQR)</strong>, identifying <strong>outliers</strong>, and creating <strong>z-scores</strong>.</p>
+<p>This project analysed an artificial dataset of <strong>500 customer transactions</strong>, of which <strong>246 were fraudulent</strong> and <strong>254 were not</strong>. The dataset contained <strong>23 variables</strong> (11 categorical and 12 numerical), covering customer demographics, financial indicators, and behavioural attributes. I used a combination of <strong>Python</strong> and <strong>Power BI</strong> to perform exploratory data analysis (EDA), identify patterns associated with fraud, and build predictive models for fraud amount.</p>
+<section id="data-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
+<p>Before conducting EDA, I prepared the dataset by:</p>
+<ul>
+<li><strong>Normalising continuous variables</strong> using z-scores<br>
+</li>
+<li>Calculating the <strong>interquartile range (IQR)</strong><br>
+</li>
+<li>Identifying <strong>outliers</strong> across key variables<br>
+</li>
+<li>Creating additional transformed variables for analysis</li>
+</ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute z-scores</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>z_scores <span class="op">=</span> (fraud_df[cols] <span class="op">-</span> fraud_df[cols].mean()) <span class="op">/</span> fraud_df[cols].std()</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -209,8 +229,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Flag outliers</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>outliers_iqr <span class="op">=</span> fraud_df[(fraud_df[<span class="st">'transaction_amount'</span>] <span class="op">&lt;</span> lower_bound) <span class="op">|</span> (fraud_df[<span class="st">'transaction_amount'</span>] <span class="op">&gt;</span> upper_bound)]</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(outliers_iqr[[<span class="st">'transaction_amount'</span>, <span class="st">'is_fraud'</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="exploratory-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h2>
+<p>EDA was conducted in both Power BI and Python to explore relationships between variables. One of the strongest patterns emerged between <strong>personal income</strong> and <strong>fraud cases</strong>.</p>
+<p>The following code was used to create income brackets and compare fraud vs non‑fraud counts</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">20000</span>, <span class="dv">40000</span>, <span class="dv">60000</span>, <span class="dv">80000</span>, <span class="bu">float</span>(<span class="st">'inf'</span>)]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'&lt;€20k'</span>, <span class="st">'€20k–€40k'</span>, <span class="st">'€40k–€60k'</span>, <span class="st">'€60k–€80k'</span>, <span class="st">'€80k+'</span>]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>fraud_df[<span class="st">'income_bracket'</span>] <span class="op">=</span> pd.cut(fraud_df[<span class="st">'personal_income'</span>], bins<span class="op">=</span>bins, labels<span class="op">=</span>labels)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>income_grouped <span class="op">=</span> fraud_df.groupby([<span class="st">'income_bracket'</span>, <span class="st">'is_fraud'</span>]).size().unstack(fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>income_grouped.columns <span class="op">=</span> [<span class="st">'Non-Fraud'</span>, <span class="st">'Fraud'</span>]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>income_grouped[<span class="st">'Total'</span>] <span class="op">=</span> income_grouped[<span class="st">'Non-Fraud'</span>] <span class="op">+</span> income_grouped[<span class="st">'Fraud'</span>]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>income_grouped[<span class="st">'Fraud Rate'</span>] <span class="op">=</span> income_grouped[<span class="st">'Fraud'</span>] <span class="op">/</span> income_grouped[<span class="st">'Total'</span>]</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>income_grouped[[<span class="st">'Non-Fraud'</span>, <span class="st">'Fraud'</span>]].plot(kind<span class="op">=</span><span class="st">'bar'</span>, stacked<span class="op">=</span><span class="va">False</span>, color<span class="op">=</span>[<span class="st">'blue'</span>, <span class="st">'pink'</span>])</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Fraud vs Non-Fraud Transactions by Income Bracket'</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Income Bracket'</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Transactions'</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="predictive-modelling" class="level2">
+<h2 class="anchored" data-anchor-id="predictive-modelling">predictive Modelling</h2>
+<p>Two models were created to predict fraud amount, a <strong>simple linear regression</strong> model, and a <strong>multiple linear regression model</strong>. The multiple linear regression had only a minor improvement over the simple linear regression which indicated minimal predictive power from the additional variables. Transaction amount was the best predictor of fraud amount.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Dependent variable (Y): fraud_amount</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> fraud_df[<span class="st">'fraud_amount'</span>]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Independent variable (X): transaction_amount</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> fraud_df[<span class="st">'transaction_amount'</span>]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Add constant for intercept</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit regression model</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(Y, X).fit()</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Print summary</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Select multiple predictors</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> fraud_df[[<span class="st">'personal_income'</span>, <span class="st">'family_income'</span>]]</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> fraud_df[<span class="st">'fraud_amount'</span>]</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Add constant for intercept</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the model</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(Y, X).fit()</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Display summary</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="reflection-skills-developed" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-skills-developed">Reflection &amp; Skills Developed</h2>
+<p>This project strengthened my ability to explore a data analytics project — from <strong>cleaning</strong> and <strong>preparing raw data</strong> to <strong>interpreting</strong> statistical outputs and <strong>communicating insights</strong> clearly. I became more confident in identifying which variables meaningfully contribute to <strong>predictive models</strong> and which do not, and I learned how to justify these decisions using <strong>statistical evidence</strong> rather than assumptions.</p>
+<p>Working with both <strong>Python</strong> and <strong>Power BI</strong> helped me combine <strong>code‑driven analysis</strong> with <strong>visual exploration</strong>. Python allowed for precise statistical testing and modelling, while Power BI made it easier to spot patterns across demographic and behavioural variables. This dual approach improved my ability to validate insights using multiple methods.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
