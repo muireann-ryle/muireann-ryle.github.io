@@ -179,7 +179,7 @@
     "href": "Projects/list/project_1.html#results",
     "title": "BERT vs GenAI for Sentiment Analysis",
     "section": "Results",
-    "text": "Results\n\nBERT Performance\n\n\n\nMetric\nScore\n\n\n\n\nAccuracy\n0.901\n\n\nPrecision\n0.700\n\n\nRecall\n0.778\n\n\nF1‑Score\n0.737\n\n\nAUC‑ROC\n0.940\n\n\n\n\nStrong performance despite class imbalance\n\nHigh AUC‑ROC indicates excellent class separation\n\nNegative class performs better due to dataset skew\n\nWeighted loss improved balance but did not fully eliminate bias\n\n\n\nGenAI Performance\n\n\n\nMetric\nOverall\nNegative\nPositive\n\n\n\n\nPrecision\n0.345\n0.98\n0.35\n\n\nRecall\n0.905\n0.75\n0.90\n\n\nF1‑Score\n0.50\n0.85\n0.50\n\n\n\n\nVery high recall for Positive class → over‑classification of positives\n\nVery low precision → many false positives\n\nLower overall accuracy (0.768)\n\nZero‑shot approach struggles with imbalanced data\n\n\n\nComparison\n\nBERT outperforms GenAI across all major metrics\n\nGenAI shows strong recall but poor precision → risky for business use\n\nBERT is more reliable for operational decision‑making\n\nGenAI may be useful for exploratory analysis but not for high‑stakes classification"
+    "text": "Results\n\nBERT Performance\n\n\n\nMetric\nScore\n\n\n\n\nAccuracy\n0.901\n\n\nPrecision\n0.700\n\n\nRecall\n0.778\n\n\nF1‑Score\n0.737\n\n\nAUC‑ROC\n0.940\n\n\n\n\nStrong performance despite class imbalance\n\nHigh AUC‑ROC indicates excellent class separation\n\nNegative class performs better due to dataset skew\n\nWeighted loss improved balance but did not fully eliminate bias\n\n\n\nGenAI Performance\n\n\n\nMetric\nOverall\nNegative\nPositive\n\n\n\n\nPrecision\n0.345\n0.98\n0.35\n\n\nRecall\n0.905\n0.75\n0.90\n\n\nF1‑Score\n0.50\n0.85\n0.50\n\n\n\n\nVery high recall for Positive class → over‑classification of positives\n\nVery low precision → many false positives\n\nLower overall accuracy (0.768)\n\nZero‑shot approach struggles with imbalanced data"
   },
   {
     "objectID": "Projects/list/project_1.html#ethical-responsible-ai-considerations",
@@ -222,5 +222,12 @@
     "title": "BERT vs GenAI for Sentiment Analysis",
     "section": "Skills Demonstrated",
     "text": "Skills Demonstrated\n\n\n\nTechnical Skills\n\n\n\nPython (PyTorch, Transformers)\n\n\nBERT fine‑tuning\n\n\nGenerative AI (Llama 3)\n\n\nAPI integration\n\n\nTokenisation & preprocessing\n\n\nModel evaluation (AUC‑ROC, F1, Precision/Recall)\n\n\n\n\n\nAnalytical Skills\n\n\n\nSentiment analysis\n\n\nHandling imbalanced datasets\n\n\nHyperparameter optimisation\n\n\nCross‑model comparison\n\n\nInsight synthesis\n\n\n\n\n\nProfessional Skills\n\n\n\nBusiness‑focused analytics\n\n\nResponsible AI evaluation\n\n\nTechnical documentation\n\n\nClear communication of model results\n\n\nCritical reflection"
+  },
+  {
+    "objectID": "Projects/list/project_1.html#model-comparison---executable-code",
+    "href": "Projects/list/project_1.html#model-comparison---executable-code",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Model Comparison - Executable code",
+    "text": "Model Comparison - Executable code\n\n\nCode\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nsns.set(style=\"whitegrid\")\n\nbert_results = {\n    \"Accuracy\": 0.901,\n    \"Precision\": 0.700,\n    \"Recall\": 0.778,\n    \"F1\": 0.737,\n    \"AUC\": 0.940\n}\n\ngenai_results = {\n    \"Accuracy\": 0.768,\n    \"Precision\": 0.345,\n    \"Recall\": 0.905,\n    \"F1\": 0.500\n}\n\ndf = pd.DataFrame([bert_results, genai_results], index=[\"BERT\", \"GenAI\"])\ndf\n\nplt.figure(figsize=(10,6))\ndf.plot(kind=\"bar\", figsize=(10,6), colormap=\"viridis\")\nplt.title(\"BERT vs GenAI — Performance Comparison\")\nplt.ylabel(\"Score\")\nplt.ylim(0,1)\nplt.legend(title=\"Metrics\")\nplt.xticks(rotation=0)\nplt.show()\n\n\n&lt;Figure size 960x576 with 0 Axes&gt;\n\n\n\n\n\n\n\n\n\n\nComparison\n\nBERT outperforms GenAI across all major metrics\n\nGenAI shows strong recall but poor precision → risky for business use\n\nBERT is more reliable for operational decision‑making\n\nGenAI may be useful for exploratory analysis but not for high‑stakes classification"
   }
 ]

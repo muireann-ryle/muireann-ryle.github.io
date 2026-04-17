@@ -4,6 +4,7 @@ subtitle: A Business-Focused Evaluation Using Starbucks Customer Reviews
 author: Muireann Ryle
 image: "/analytics-project.png"
 date: "04/16/2026"
+code-fold: true
 ---
 
 ## Overview
@@ -97,6 +98,44 @@ The dataset consists of **850 Starbucks reviews (2000–2023)** containing:
 - Very low precision → many false positives  
 - Lower overall accuracy (0.768)  
 - Zero‑shot approach struggles with imbalanced data  
+
+## Model Comparison - Executable code
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set(style="whitegrid")
+
+bert_results = {
+    "Accuracy": 0.901,
+    "Precision": 0.700,
+    "Recall": 0.778,
+    "F1": 0.737,
+    "AUC": 0.940
+}
+
+genai_results = {
+    "Accuracy": 0.768,
+    "Precision": 0.345,
+    "Recall": 0.905,
+    "F1": 0.500
+}
+
+df = pd.DataFrame([bert_results, genai_results], index=["BERT", "GenAI"])
+df
+
+plt.figure(figsize=(10,6))
+df.plot(kind="bar", figsize=(10,6), colormap="viridis")
+plt.title("BERT vs GenAI — Performance Comparison")
+plt.ylabel("Score")
+plt.ylim(0,1)
+plt.legend(title="Metrics")
+plt.xticks(rotation=0)
+plt.show()
+
+
+```
 
 ### Comparison
 - **BERT outperforms GenAI across all major metrics**  
