@@ -21,13 +21,15 @@ website:
         target: _blank
   page-footer:
    left: "Copyright © 2026 Muireann Ryle"
-   right:
+   right: 
     - icon: github
       href: https://github.com/muireann-ryle
     - icon: linkedin
       href: https://www.linkedin.com/in/muireann-ryle-2797242a0/
     - icon: envelope
       href: mailto:muireann.ryle2@mail.dcu.ie
+    - text: "Built with Quarto"
+      href: https://quarto.org
 
 format:
   html:
