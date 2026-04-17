@@ -2,6 +2,7 @@
 title: Examining Happiness Across Cultures
 subtitle: Measurement Non‑Equivalence & Effect Size Interpretation in African and Western‑European Countries
 author: Muireann Ryle
+image: "/happiness-project.png"
 date: "03/14/2025"
 ---
 
