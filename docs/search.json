@@ -25,14 +25,14 @@
     "href": "Projects/index.html",
     "title": "My Projects",
     "section": "",
-    "text": "Examining Happiness Across Cultures\n\n\nMeasurement Non‑Equivalence & Effect Size Interpretation in African and Western‑European Countries\n\n\n\n\n\n\n\n\nMar 14, 2025\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying Fraud\n\n\nAn analysis of fraud detection using statistical tools and techniques\n\n\n\n\n\n\n\n\nNov 28, 2025\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nBERT vs GenAI for Sentiment Analysis\n\n\nComparing a BERT and GenAI model on a Starbucks customer feedback dataset for sentiment analysis\n\n\n\n\n\n\n\n\nMuireann Ryle\n\n\n\n\n\nNo matching items"
+    "text": "Examining Happiness Across Cultures\n\n\nMeasurement Non‑Equivalence & Effect Size Interpretation in African and Western‑European Countries\n\n\n\n\n\n\n\n\nMar 14, 2025\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying Fraud\n\n\nAn analysis of fraud detection using statistical tools and techniques\n\n\n\n\n\n\n\n\nNov 28, 2025\n\n\nMuireann Ryle\n\n\n\n\n\n\n\n\n\n\n\n\nBERT vs GenAI for Sentiment Analysis\n\n\nA Business-Focused Evaluation Using Starbucks Customer Reviews\n\n\n\n\n\n\n\n\nApr 16, 2026\n\n\nMuireann Ryle\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Projects/list/project_1.html",
     "href": "Projects/list/project_1.html",
     "title": "BERT vs GenAI for Sentiment Analysis",
     "section": "",
-    "text": "##test"
+    "text": "This project compares two modern NLP approaches — a fine‑tuned BERT model and a Generative AI (Llama 3) zero‑shot classifier — to determine which is more effective for sentiment analysis in a real business context. Using 850 Starbucks customer reviews scraped from ConsumerAffairs, the project evaluates both models on accuracy, precision, recall, F1‑score, and AUC‑ROC. The results show that while both models have strengths, fine‑tuned BERT significantly outperforms GenAI on imbalanced datasets and provides more reliable sentiment classification for operational decision‑making."
   },
   {
     "objectID": "Projects/list/project_2.html",
@@ -145,5 +145,82 @@
     "title": "Examining Happiness Across Cultures",
     "section": "Skills Demonstrated",
     "text": "Skills Demonstrated\n\n\n\nTechnical Skills\n\n\n\nR programming\n\n\nConfirmatory Factor Analysis (CFA)\n\n\nMeasurement invariance testing\n\n\nEffect size computation (dMACS, SDI2, UDI2, WSDI, WUDI)\n\n\nData cleaning & preprocessing\n\n\nStatistical reporting\n\n\n\n\n\nAnalytical Skills\n\n\n\nCross‑cultural comparison\n\n\nPsychometric evaluation\n\n\nInterpretation of model fit indices\n\n\nCritical evaluation of measurement bias\n\n\nInsight generation\n\n\nFeature interpretation\n\n\n\n\n\nProfessional Skills\n\n\n\nAcademic research writing\n\n\nSynthesising complex findings\n\n\nEthical handling of secondary data\n\n\nClear communication of statistical insights\n\n\nProject organisation & documentation"
+  },
+  {
+    "objectID": "Projects/list/project_1.html#overview",
+    "href": "Projects/list/project_1.html#overview",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "",
+    "text": "This project compares two modern NLP approaches — a fine‑tuned BERT model and a Generative AI (Llama 3) zero‑shot classifier — to determine which is more effective for sentiment analysis in a real business context. Using 850 Starbucks customer reviews scraped from ConsumerAffairs, the project evaluates both models on accuracy, precision, recall, F1‑score, and AUC‑ROC. The results show that while both models have strengths, fine‑tuned BERT significantly outperforms GenAI on imbalanced datasets and provides more reliable sentiment classification for operational decision‑making."
+  },
+  {
+    "objectID": "Projects/list/project_1.html#business-problem",
+    "href": "Projects/list/project_1.html#business-problem",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Business Problem",
+    "text": "Business Problem\nStarbucks operates over 32,000 stores globally, generating massive volumes of customer feedback. Manual review is inefficient and risks overlooking key insights. Automated sentiment analysis enables:\n\nMonitoring customer experience at scale\n\nIdentifying underperforming locations\n\nDetecting emerging issues in products or service\n\nSupporting data‑driven operational decisions\n\nThe goal of this project is to determine which NLP approach — BERT or GenAI — provides the most accurate and reliable sentiment classification for business use."
+  },
+  {
+    "objectID": "Projects/list/project_1.html#dataset",
+    "href": "Projects/list/project_1.html#dataset",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Dataset",
+    "text": "Dataset\nThe dataset consists of 850 Starbucks reviews (2000–2023) containing:\n\nReviewer name\n\nLocation\n\nDate\n\nRating (1–5)\n\nText review\n\nImage links\n\n\nPreprocessing\n\nRemoved rows without ratings → 705 reviews remaining\n\nConverted ratings into sentiment labels:\n\nNegative: 1–2\n\nNeutral: 3 (removed due to only 33 samples)\n\nPositive: 4–5\n\n\nResulting distribution: 82% Negative, 18% Positive\n\nCleaned text (whitespace, URLs, stray characters)\n\nStratified train/validation/test split (70/15/15)\n\nTokenised using bert-base-uncased WordPiece tokenizer"
+  },
+  {
+    "objectID": "Projects/list/project_1.html#methodology",
+    "href": "Projects/list/project_1.html#methodology",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Methodology",
+    "text": "Methodology\n\nBERT Model\n\nModel: BertForSequenceClassification\n\nFine‑tuned using PyTorch + HuggingFace\n\nWeighted cross‑entropy loss to address class imbalance\n\nHyperparameters included:\n\nLearning rate: 2e‑5\n\nBatch size: 16\n\nEpochs: 4\n\nWarmup ratio: 0.1\n\nWeight decay: 0.01\n\n\nEarly stopping based on validation F1\n\nEvaluated using accuracy, precision, recall, F1, AUC‑ROC\n\n\n\nGenAI Model (Llama 3)\n\nZero‑shot prompting\n\nLocally hosted Llama 3 model\n\nPrompt: “Classify the sentiment as Positive or Negative.”\n\nAPI call for each review\n\nPredictions mapped to binary labels"
+  },
+  {
+    "objectID": "Projects/list/project_1.html#results",
+    "href": "Projects/list/project_1.html#results",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Results",
+    "text": "Results\n\nBERT Performance\n\n\n\nMetric\nScore\n\n\n\n\nAccuracy\n0.901\n\n\nPrecision\n0.700\n\n\nRecall\n0.778\n\n\nF1‑Score\n0.737\n\n\nAUC‑ROC\n0.940\n\n\n\n\nStrong performance despite class imbalance\n\nHigh AUC‑ROC indicates excellent class separation\n\nNegative class performs better due to dataset skew\n\nWeighted loss improved balance but did not fully eliminate bias\n\n\n\nGenAI Performance\n\n\n\nMetric\nOverall\nNegative\nPositive\n\n\n\n\nPrecision\n0.345\n0.98\n0.35\n\n\nRecall\n0.905\n0.75\n0.90\n\n\nF1‑Score\n0.50\n0.85\n0.50\n\n\n\n\nVery high recall for Positive class → over‑classification of positives\n\nVery low precision → many false positives\n\nLower overall accuracy (0.768)\n\nZero‑shot approach struggles with imbalanced data\n\n\n\nComparison\n\nBERT outperforms GenAI across all major metrics\n\nGenAI shows strong recall but poor precision → risky for business use\n\nBERT is more reliable for operational decision‑making\n\nGenAI may be useful for exploratory analysis but not for high‑stakes classification"
+  },
+  {
+    "objectID": "Projects/list/project_1.html#ethical-responsible-ai-considerations",
+    "href": "Projects/list/project_1.html#ethical-responsible-ai-considerations",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Ethical & Responsible AI Considerations",
+    "text": "Ethical & Responsible AI Considerations\nThe project evaluates both models against the EU’s Ethics Guidelines for Trustworthy AI, focusing on:\n\nHuman oversight: Models should support, not replace, human judgement\n\nRobustness: Systems must be resilient to errors and adversarial inputs\n\nPrivacy: No personal identifiers used; data handled securely\n\nTransparency: BERT pipeline is traceable; LLMs remain “black‑box”\n\nFairness: Class imbalance introduces bias; must be monitored\n\nEnvironmental impact: Large models require significant energy\n\nAccountability: Clear documentation and responsibility required"
+  },
+  {
+    "objectID": "Projects/list/project_1.html#business-relevance",
+    "href": "Projects/list/project_1.html#business-relevance",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Business Relevance",
+    "text": "Business Relevance\nAutomated sentiment analysis enables Starbucks to:\n\nIdentify underperforming stores\n\nDetect emerging customer issues\n\nPrioritise operational improvements\n\nEnhance customer satisfaction\n\nReduce manual review workload\n\nBERT’s superior performance makes it the more suitable model for deployment in a real business environment."
+  },
+  {
+    "objectID": "Projects/list/project_1.html#limitations",
+    "href": "Projects/list/project_1.html#limitations",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Limitations",
+    "text": "Limitations\n\nImbalanced dataset affects both models\n\nNeutral reviews excluded\n\nGenAI performance depends heavily on prompt quality\n\nBERT requires computational resources for fine‑tuning"
+  },
+  {
+    "objectID": "Projects/list/project_1.html#future-work",
+    "href": "Projects/list/project_1.html#future-work",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Future Work",
+    "text": "Future Work\n\nExplore data augmentation to address imbalance\n\nTest additional transformer models (RoBERTa, DistilBERT)\n\nApply prompt engineering to improve GenAI performance\n\nIncorporate explainability tools (LIME, SHAP)\n\nExpand dataset for more robust training"
+  },
+  {
+    "objectID": "Projects/list/project_1.html#reflection",
+    "href": "Projects/list/project_1.html#reflection",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Reflection",
+    "text": "Reflection\nThis project strengthened my skills in NLP, model fine‑tuning, and performance evaluation. I gained hands‑on experience with BERT, Llama 3, PyTorch, HuggingFace, and API‑based model integration. It also deepened my understanding of responsible AI principles and the practical challenges of deploying sentiment analysis systems in real business environments."
+  },
+  {
+    "objectID": "Projects/list/project_1.html#skills-demonstrated",
+    "href": "Projects/list/project_1.html#skills-demonstrated",
+    "title": "BERT vs GenAI for Sentiment Analysis",
+    "section": "Skills Demonstrated",
+    "text": "Skills Demonstrated\n\n\n\nTechnical Skills\n\n\n\nPython (PyTorch, Transformers)\n\n\nBERT fine‑tuning\n\n\nGenerative AI (Llama 3)\n\n\nAPI integration\n\n\nTokenisation & preprocessing\n\n\nModel evaluation (AUC‑ROC, F1, Precision/Recall)\n\n\n\n\n\nAnalytical Skills\n\n\n\nSentiment analysis\n\n\nHandling imbalanced datasets\n\n\nHyperparameter optimisation\n\n\nCross‑model comparison\n\n\nInsight synthesis\n\n\n\n\n\nProfessional Skills\n\n\n\nBusiness‑focused analytics\n\n\nResponsible AI evaluation\n\n\nTechnical documentation\n\n\nClear communication of model results\n\n\nCritical reflection"
   }
 ]

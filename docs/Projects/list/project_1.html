@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-90573e795208b9ac1dc44bf389e7b988.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-bc9832dc777c0473bf4a0f0865b6166a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,6 +105,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
@@ -115,21 +121,49 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#business-problem" id="toc-business-problem" class="nav-link" data-scroll-target="#business-problem">Business Problem</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a>
+  <ul class="collapse">
+  <li><a href="#preprocessing" id="toc-preprocessing" class="nav-link" data-scroll-target="#preprocessing">Preprocessing</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
+  <ul class="collapse">
+  <li><a href="#bert-model" id="toc-bert-model" class="nav-link" data-scroll-target="#bert-model">BERT Model</a></li>
+  <li><a href="#genai-model-llama-3" id="toc-genai-model-llama-3" class="nav-link" data-scroll-target="#genai-model-llama-3">GenAI Model (Llama 3)</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#bert-performance" id="toc-bert-performance" class="nav-link" data-scroll-target="#bert-performance">BERT Performance</a></li>
+  <li><a href="#genai-performance" id="toc-genai-performance" class="nav-link" data-scroll-target="#genai-performance">GenAI Performance</a></li>
+  <li><a href="#comparison" id="toc-comparison" class="nav-link" data-scroll-target="#comparison">Comparison</a></li>
+  </ul></li>
+  <li><a href="#ethical-responsible-ai-considerations" id="toc-ethical-responsible-ai-considerations" class="nav-link" data-scroll-target="#ethical-responsible-ai-considerations">Ethical &amp; Responsible AI Considerations</a></li>
+  <li><a href="#business-relevance" id="toc-business-relevance" class="nav-link" data-scroll-target="#business-relevance">Business Relevance</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work">Future Work</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#skills-demonstrated" id="toc-skills-demonstrated" class="nav-link" data-scroll-target="#skills-demonstrated">Skills Demonstrated</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">BERT vs GenAI for Sentiment Analysis</h1>
-<p class="subtitle lead">Comparing a BERT and GenAI model on a Starbucks customer feedback dataset for sentiment analysis</p>
+<p class="subtitle lead">A Business-Focused Evaluation Using Starbucks Customer Reviews</p>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-left">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -147,9 +181,348 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>##test</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This project compares two modern NLP approaches — a fine‑tuned <strong>BERT</strong> model and a <strong>Generative AI (Llama 3)</strong> zero‑shot classifier — to determine which is more effective for sentiment analysis in a real business context. Using 850 Starbucks customer reviews scraped from ConsumerAffairs, the project evaluates both models on accuracy, precision, recall, F1‑score, and AUC‑ROC. The results show that while both models have strengths, <strong>fine‑tuned BERT significantly outperforms GenAI</strong> on imbalanced datasets and provides more reliable sentiment classification for operational decision‑making.</p>
+</section>
+<section id="business-problem" class="level2">
+<h2 class="anchored" data-anchor-id="business-problem">Business Problem</h2>
+<p>Starbucks operates over 32,000 stores globally, generating massive volumes of customer feedback. Manual review is inefficient and risks overlooking key insights. Automated sentiment analysis enables:</p>
+<ul>
+<li>Monitoring customer experience at scale<br>
+</li>
+<li>Identifying underperforming locations<br>
+</li>
+<li>Detecting emerging issues in products or service<br>
+</li>
+<li>Supporting data‑driven operational decisions</li>
+</ul>
+<p>The goal of this project is to determine which NLP approach — BERT or GenAI — provides the most accurate and reliable sentiment classification for business use.</p>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>The dataset consists of <strong>850 Starbucks reviews (2000–2023)</strong> containing:</p>
+<ul>
+<li>Reviewer name<br>
+</li>
+<li>Location<br>
+</li>
+<li>Date<br>
+</li>
+<li>Rating (1–5)<br>
+</li>
+<li>Text review<br>
+</li>
+<li>Image links</li>
+</ul>
+<section id="preprocessing" class="level3">
+<h3 class="anchored" data-anchor-id="preprocessing">Preprocessing</h3>
+<ul>
+<li>Removed rows without ratings → <strong>705 reviews remaining</strong><br>
+</li>
+<li>Converted ratings into sentiment labels:
+<ul>
+<li><strong>Negative:</strong> 1–2<br>
+</li>
+<li><strong>Neutral:</strong> 3 (removed due to only 33 samples)<br>
+</li>
+<li><strong>Positive:</strong> 4–5<br>
+</li>
+</ul></li>
+<li>Resulting distribution: <strong>82% Negative, 18% Positive</strong><br>
+</li>
+<li>Cleaned text (whitespace, URLs, stray characters)<br>
+</li>
+<li>Stratified train/validation/test split (70/15/15)<br>
+</li>
+<li>Tokenised using <strong>bert-base-uncased WordPiece</strong> tokenizer</li>
+</ul>
+</section>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<section id="bert-model" class="level3">
+<h3 class="anchored" data-anchor-id="bert-model">BERT Model</h3>
+<ul>
+<li>Model: <code>BertForSequenceClassification</code><br>
+</li>
+<li>Fine‑tuned using PyTorch + HuggingFace<br>
+</li>
+<li>Weighted cross‑entropy loss to address class imbalance<br>
+</li>
+<li>Hyperparameters included:
+<ul>
+<li>Learning rate: 2e‑5<br>
+</li>
+<li>Batch size: 16<br>
+</li>
+<li>Epochs: 4<br>
+</li>
+<li>Warmup ratio: 0.1<br>
+</li>
+<li>Weight decay: 0.01<br>
+</li>
+</ul></li>
+<li>Early stopping based on validation F1<br>
+</li>
+<li>Evaluated using accuracy, precision, recall, F1, AUC‑ROC</li>
+</ul>
+</section>
+<section id="genai-model-llama-3" class="level3">
+<h3 class="anchored" data-anchor-id="genai-model-llama-3">GenAI Model (Llama 3)</h3>
+<ul>
+<li>Zero‑shot prompting<br>
+</li>
+<li>Locally hosted Llama 3 model<br>
+</li>
+<li>Prompt: <em>“Classify the sentiment as Positive or Negative.”</em><br>
+</li>
+<li>API call for each review<br>
+</li>
+<li>Predictions mapped to binary labels</li>
+</ul>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="bert-performance" class="level3">
+<h3 class="anchored" data-anchor-id="bert-performance">BERT Performance</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accuracy</td>
+<td><strong>0.901</strong></td>
+</tr>
+<tr class="even">
+<td>Precision</td>
+<td>0.700</td>
+</tr>
+<tr class="odd">
+<td>Recall</td>
+<td>0.778</td>
+</tr>
+<tr class="even">
+<td>F1‑Score</td>
+<td>0.737</td>
+</tr>
+<tr class="odd">
+<td>AUC‑ROC</td>
+<td><strong>0.940</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Strong performance despite class imbalance<br>
+</li>
+<li>High AUC‑ROC indicates excellent class separation<br>
+</li>
+<li>Negative class performs better due to dataset skew<br>
+</li>
+<li>Weighted loss improved balance but did not fully eliminate bias</li>
+</ul>
+</section>
+<section id="genai-performance" class="level3">
+<h3 class="anchored" data-anchor-id="genai-performance">GenAI Performance</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Overall</th>
+<th>Negative</th>
+<th>Positive</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Precision</td>
+<td>0.345</td>
+<td><strong>0.98</strong></td>
+<td>0.35</td>
+</tr>
+<tr class="even">
+<td>Recall</td>
+<td>0.905</td>
+<td>0.75</td>
+<td><strong>0.90</strong></td>
+</tr>
+<tr class="odd">
+<td>F1‑Score</td>
+<td>0.50</td>
+<td>0.85</td>
+<td>0.50</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Very high recall for Positive class → over‑classification of positives<br>
+</li>
+<li>Very low precision → many false positives<br>
+</li>
+<li>Lower overall accuracy (0.768)<br>
+</li>
+<li>Zero‑shot approach struggles with imbalanced data</li>
+</ul>
+</section>
+<section id="comparison" class="level3">
+<h3 class="anchored" data-anchor-id="comparison">Comparison</h3>
+<ul>
+<li><strong>BERT outperforms GenAI across all major metrics</strong><br>
+</li>
+<li>GenAI shows strong recall but poor precision → risky for business use<br>
+</li>
+<li>BERT is more reliable for operational decision‑making<br>
+</li>
+<li>GenAI may be useful for exploratory analysis but not for high‑stakes classification</li>
+</ul>
+</section>
+</section>
+<section id="ethical-responsible-ai-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="ethical-responsible-ai-considerations">Ethical &amp; Responsible AI Considerations</h2>
+<p>The project evaluates both models against the EU’s <em>Ethics Guidelines for Trustworthy AI</em>, focusing on:</p>
+<ul>
+<li><strong>Human oversight:</strong> Models should support, not replace, human judgement<br>
+</li>
+<li><strong>Robustness:</strong> Systems must be resilient to errors and adversarial inputs<br>
+</li>
+<li><strong>Privacy:</strong> No personal identifiers used; data handled securely<br>
+</li>
+<li><strong>Transparency:</strong> BERT pipeline is traceable; LLMs remain “black‑box”<br>
+</li>
+<li><strong>Fairness:</strong> Class imbalance introduces bias; must be monitored<br>
+</li>
+<li><strong>Environmental impact:</strong> Large models require significant energy<br>
+</li>
+<li><strong>Accountability:</strong> Clear documentation and responsibility required</li>
+</ul>
+</section>
+<section id="business-relevance" class="level2">
+<h2 class="anchored" data-anchor-id="business-relevance">Business Relevance</h2>
+<p>Automated sentiment analysis enables Starbucks to:</p>
+<ul>
+<li>Identify underperforming stores<br>
+</li>
+<li>Detect emerging customer issues<br>
+</li>
+<li>Prioritise operational improvements<br>
+</li>
+<li>Enhance customer satisfaction<br>
+</li>
+<li>Reduce manual review workload</li>
+</ul>
+<p>BERT’s superior performance makes it the more suitable model for deployment in a real business environment.</p>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<ul>
+<li>Imbalanced dataset affects both models<br>
+</li>
+<li>Neutral reviews excluded<br>
+</li>
+<li>GenAI performance depends heavily on prompt quality<br>
+</li>
+<li>BERT requires computational resources for fine‑tuning</li>
+</ul>
+</section>
+<section id="future-work" class="level2">
+<h2 class="anchored" data-anchor-id="future-work">Future Work</h2>
+<ul>
+<li>Explore data augmentation to address imbalance<br>
+</li>
+<li>Test additional transformer models (RoBERTa, DistilBERT)<br>
+</li>
+<li>Apply prompt engineering to improve GenAI performance<br>
+</li>
+<li>Incorporate explainability tools (LIME, SHAP)<br>
+</li>
+<li>Expand dataset for more robust training</li>
+</ul>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>This project strengthened my skills in NLP, model fine‑tuning, and performance evaluation. I gained hands‑on experience with BERT, Llama 3, PyTorch, HuggingFace, and API‑based model integration. It also deepened my understanding of responsible AI principles and the practical challenges of deploying sentiment analysis systems in real business environments.</p>
+</section>
+<section id="skills-demonstrated" class="level2">
+<h2 class="anchored" data-anchor-id="skills-demonstrated">Skills Demonstrated</h2>
+<div class="skills-grid">
+<div class="skill-card">
+<h3 class="anchored">
+Technical Skills
+</h3>
+<ul>
+<li>
+Python (PyTorch, Transformers)
+</li>
+<li>
+BERT fine‑tuning
+</li>
+<li>
+Generative AI (Llama 3)
+</li>
+<li>
+API integration
+</li>
+<li>
+Tokenisation &amp; preprocessing
+</li>
+<li>
+Model evaluation (AUC‑ROC, F1, Precision/Recall)
+</li>
+</ul>
+</div>
+<div class="skill-card">
+<h3 class="anchored">
+Analytical Skills
+</h3>
+<ul>
+<li>
+Sentiment analysis
+</li>
+<li>
+Handling imbalanced datasets
+</li>
+<li>
+Hyperparameter optimisation
+</li>
+<li>
+Cross‑model comparison
+</li>
+<li>
+Insight synthesis
+</li>
+</ul>
+</div>
+<div class="skill-card">
+<h3 class="anchored">
+Professional Skills
+</h3>
+<ul>
+<li>
+Business‑focused analytics
+</li>
+<li>
+Responsible AI evaluation
+</li>
+<li>
+Technical documentation
+</li>
+<li>
+Clear communication of model results
+</li>
+<li>
+Critical reflection
+</li>
+</ul>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -553,6 +926,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright © 2026 Muireann Ryle</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/muireann-ryle">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/muireann-ryle-2797242a0/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:muireann.ryle2@mail.dcu.ie">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
