@@ -17,6 +17,8 @@ website:
         text: Projects
       - href: reflection.qmd
         text: Reflections
+      - href: contact.qmd
+        text: Contacts
     right:
       - href: cv.pdf
         text: CV

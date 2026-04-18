@@ -257,5 +257,33 @@
     "title": "Reflecting on Building my E‑Portfolio",
     "section": "My learning experience",
     "text": "My learning experience\n\nThe Starting Point\nPrior to this project I had not worked with Quarto, VScode, GitHub, or SCSS. I found it overwhelming at first to be introduced to multiple different methods of building the site. During each lecture we were taught new terminology and methods which was difficult at first. However, we performed pratcical exercises during the classes which was a big help in developing the skills and gaining a better understanding of the concepts.\n\n\nKey Skills Developed\n\nBuilding a multi-page Quarto website\nManaging the site using Git and publishing pages using GitHub\nEmbedding active Python code in Quarto\nUsing SCSS to customise the website style\nStructuring the website to be professional and usable"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact Me",
+    "section": "",
+    "text": "Whether you would like to discuss analytics, psychology, tennis, or anything in between, I’d love to hear from you!\n\n\n\n\n\n\n\n\nNote\n\n\n\nEmail: muireann.ryle2@mail.dcu.ie\n\n\n\n\n\n\nThe best places to find me online: - LinkedIn - GitHub\n\n\n\n\n\n\nBusiness Analytics | Psychology | Mathematics\n\n\nicon: location-dot text: Dublin / Kildare\n\n\n📧 muireann.ryle2@mail.dcu.ie"
+  },
+  {
+    "objectID": "contact.html#email",
+    "href": "contact.html#email",
+    "title": "Contact Me",
+    "section": "",
+    "text": "Note\n\n\n\nEmail: muireann.ryle2@mail.dcu.ie"
+  },
+  {
+    "objectID": "contact.html#social-links",
+    "href": "contact.html#social-links",
+    "title": "Contact Me",
+    "section": "",
+    "text": "The best places to find me online: - LinkedIn - GitHub"
+  },
+  {
+    "objectID": "contact.html#quick-contact-card",
+    "href": "contact.html#quick-contact-card",
+    "title": "Contact Me",
+    "section": "",
+    "text": "Business Analytics | Psychology | Mathematics\n\n\nicon: location-dot text: Dublin / Kildare\n\n\n📧 muireann.ryle2@mail.dcu.ie"
   }
 ]

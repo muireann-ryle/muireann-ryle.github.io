@@ -1,0 +1,29 @@
+---
+title: "Contact Me"
+---
+
+# Get In Touch {{< fa phone >}}
+Whether you would like to discuss analytics, psychology, tennis, or anything in between, I'd love to hear
+from you!
+
+## Email {{< fa solid envelope >}}
+::: callout-note
+**Email:**
+[muireann.ryle2@mail.dcu.ie](mailto:muireann.ryle2@mail.dcu.ie)
+:::
+
+---
+## Social Links
+
+The best places to find me online:
+- [LinkedIn](https://www.linkedin.com/in/muireann-ryle-2797242a0/)
+- [GitHub](https://github.com/muireann-ryle)
+
+## Quick Contact Card
+
+<div style="border: 1px solid #ddd; padding: 1rem; border-radius: 8px; max-width: 350px;">
+<h3> Muireann Ryle</h3>
+<p><strong>Business Analytics | Psychology | Mathematics</strong></p>
+<p>{{< fa solid location-dot >}} Dublin / Kildare</p>
+<p>{{< fa solid envelope >}} <a href="mailto:muireann.ryle2@mail.dcu.ie">muireann.ryle2@mail.dcu.ie</a></p>
+</div>
