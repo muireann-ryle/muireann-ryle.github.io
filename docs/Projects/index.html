@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -217,91 +217,70 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1741910400000" data-listing-file-modified-sort="1776429197099" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="674">
-<div class="thumbnail"><a href="../Projects/list/project_3.html" class="no-external">
-
-<img loading="lazy" src="../happiness-project.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Projects/list/project_3.html" class="no-external">Examining Happiness Across Cultures</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Projects/list/project_3.html" class="no-external">Measurement Non‑Equivalence &amp; Effect Size Interpretation in African and Western‑European Countries</a>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1776294000000" data-listing-file-modified-sort="1776544648499" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="928">
+<a href="../Projects/list/project_1.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../analytics-project.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+BERT vs GenAI for Sentiment Analysis
+</h5>
+<div class="card-text listing-description delink">
+<p>A Business-Focused Evaluation Using Starbucks Customer Reviews</p>
 </div>
-<div class="delink listing-description"><a href="../Projects/list/project_3.html" class="no-external">
-This project examined how happiness is measured across cultures, focusing specifically on African and Western‑European countries. Using the ISP Happiness dataset, the study…<strong></strong><strong></strong><strong></strong><strong></strong><strong></strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../Projects/list/project_3.html" class="no-external">
-<div class="listing-date">
-Mar 14, 2025
-</div>
-<div class="listing-author">
-Muireann Ryle
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1764288000000" data-listing-file-modified-sort="1776378468620" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="454">
-<div class="thumbnail"><a href="../Projects/list/project_2.html" class="no-external">
-
-<img loading="lazy" src="../fraud-project.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Projects/list/project_2.html" class="no-external">Identifying Fraud</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Projects/list/project_2.html" class="no-external">An analysis of fraud detection using statistical tools and techniques</a>
-</div>
-<div class="delink listing-description"><a href="../Projects/list/project_2.html" class="no-external">
-This project analysed an artificial dataset of <strong>500 customer transactions</strong>, of which <strong>246 were fraudulent</strong> and <strong>254 were not</strong>. The dataset contained <strong>23 variables</strong> (11 categorical…<strong></strong><strong></strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../Projects/list/project_2.html" class="no-external">
-<div class="listing-date">
-Nov 28, 2025
-</div>
-<div class="listing-author">
-Muireann Ryle
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1776294000000" data-listing-file-modified-sort="1776431557915" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="928">
-<div class="thumbnail"><a href="../Projects/list/project_1.html" class="no-external">
-
-<img loading="lazy" src="../analytics-project.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../Projects/list/project_1.html" class="no-external">BERT vs GenAI for Sentiment Analysis</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../Projects/list/project_1.html" class="no-external">A Business-Focused Evaluation Using Starbucks Customer Reviews</a>
-</div>
-<div class="delink listing-description"><a href="../Projects/list/project_1.html" class="no-external">
-This project compares two modern NLP approaches — a fine‑tuned <strong>BERT</strong> model and a <strong>Generative AI (Llama 3)</strong> zero‑shot classifier — to determine which is more effective for…<strong></strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../Projects/list/project_1.html" class="no-external">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Apr 16, 2026
 </div>
-<div class="listing-author">
-Muireann Ryle
 </div>
-</a>
 </div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1741910400000" data-listing-file-modified-sort="1776544643858" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="674">
+<a href="../Projects/list/project_3.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../happiness-project.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Examining Happiness Across Cultures
+</h5>
+<div class="card-text listing-description delink">
+<p>Measurement Non‑Equivalence &amp; Effect Size Interpretation in African and Western‑European Countries</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Mar 14, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-date-sort="1764288000000" data-listing-file-modified-sort="1776544645905" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="454">
+<a href="../Projects/list/project_2.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../fraud-project.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Identifying Fraud
+</h5>
+<div class="card-text listing-description delink">
+<p>An analysis of fraud detection using statistical tools and techniques</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 28, 2025
+</div>
+</div>
+</div>
+</div></a>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>

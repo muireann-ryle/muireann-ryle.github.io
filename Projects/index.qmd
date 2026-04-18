@@ -1,10 +1,9 @@
 ---
 title: My Projects
-navbar: true
 listing:
   contents: /
-  sort: "date"
-  type: default
+  type: grid
+  fields: ["image", "title", "date", "description"]
   categories: false   
 ---
 

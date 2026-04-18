@@ -1,6 +1,6 @@
 ---
 title: BERT vs GenAI for Sentiment Analysis 
-subtitle: A Business-Focused Evaluation Using Starbucks Customer Reviews
+description: A Business-Focused Evaluation Using Starbucks Customer Reviews
 author: Muireann Ryle
 image: "/analytics-project.png"
 date: "04/16/2026"
