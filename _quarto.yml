@@ -17,9 +17,9 @@ website:
         text: Projects
       - href: reflection.qmd
         text: Reflections
-      - href: contact.qmd
-        text: Contacts
     right:
+      - href: contact.qmd
+        text: Contact
       - href: cv.pdf
         text: CV
         target: _blank
@@ -43,10 +43,3 @@ format:
     mainfont: Nunito
     toc: true
     page-layout: full
-
-
-
-
-
-  
-
