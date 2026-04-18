@@ -1,5 +1,6 @@
 ---
 title: My Projects
+navbar: true
 listing:
   contents: /
   sort: "date"
