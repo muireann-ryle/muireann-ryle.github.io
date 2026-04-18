@@ -2,6 +2,7 @@
 title: My Projects
 listing:
   contents: /
+  sort: "date desc"
   type: grid
   fields: ["image", "title", "date", "description"]
   categories: false   
