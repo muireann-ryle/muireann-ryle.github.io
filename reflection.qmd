@@ -1,3 +1,28 @@
 ---
-title: "Reflecting on the MSc in Business Analytics"
+title: "Reflecting on Building my E‑Portfolio"
 ---
+Creating this E-Portfolio allowed me to explore and strengthen my **technical**, **analytical**, and 
+**communication** skills. It was an extremely useful introduction to **Quarto**, **GitHub**, and **SCSS**. The practical element
+of building the E-Portfolio while initially learning the skills allowed me to gain a better understanding
+of these tools.
+
+## My learning experience
+### The Starting Point
+Prior to this project I had not worked with Quarto, VScode, GitHub, or SCSS. I found it overwhelming at first
+to be introduced to multiple different methods of building the site. During each lecture we were taught
+new terminology and methods which was difficult at first. However, we performed pratcical exercises
+during the classes which was a big help in developing the skills and gaining a better understanding of the
+concepts. 
+
+### Key Skills Developed
+- Building a multi-page Quarto website
+- Managing the site using Git and publishing pages using GitHub
+- Embedding active Python code in Quarto
+- Using SCSS to customise the website style
+- Structuring the website to be professional and usable
+
+
+
+
+
+

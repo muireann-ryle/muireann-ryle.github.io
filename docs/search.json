@@ -229,5 +229,33 @@
     "title": "BERT vs GenAI for Sentiment Analysis",
     "section": "Model Comparison - Executable code",
     "text": "Model Comparison - Executable code\n\n\nCode\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nsns.set(style=\"whitegrid\")\n\nbert_results = {\n    \"Accuracy\": 0.901,\n    \"Precision\": 0.700,\n    \"Recall\": 0.778,\n    \"F1\": 0.737,\n    \"AUC\": 0.940\n}\n\ngenai_results = {\n    \"Accuracy\": 0.768,\n    \"Precision\": 0.345,\n    \"Recall\": 0.905,\n    \"F1\": 0.500\n}\n\ndf = pd.DataFrame([bert_results, genai_results], index=[\"BERT\", \"GenAI\"])\ndf\n\nplt.figure(figsize=(10,6))\ndf.plot(kind=\"bar\", figsize=(10,6), colormap=\"viridis\")\nplt.title(\"BERT vs GenAI — Performance Comparison\")\nplt.ylabel(\"Score\")\nplt.ylim(0,1)\nplt.legend(title=\"Metrics\")\nplt.xticks(rotation=0)\nplt.show()\n\n\n&lt;Figure size 960x576 with 0 Axes&gt;\n\n\n\n\n\n\n\n\n\n\nComparison\n\nBERT outperforms GenAI across all major metrics\n\nGenAI shows strong recall but poor precision → risky for business use\n\nBERT is more reliable for operational decision‑making\n\nGenAI may be useful for exploratory analysis but not for high‑stakes classification"
+  },
+  {
+    "objectID": "reflection.html",
+    "href": "reflection.html",
+    "title": "Reflecting on Building my E‑Portfolio",
+    "section": "",
+    "text": "Creating this E-Portfolio allowed me to explore and strengthen my technical, analytical, and *8communication skills. It was an extremely useful introduction to Quarto, GitHub, and SCSS**. The practical element of building the E-Portfolio while initially learning the skills allowed me to gain a better understanding of these tools."
+  },
+  {
+    "objectID": "reflection.html#key-skills-developed",
+    "href": "reflection.html#key-skills-developed",
+    "title": "Reflecting on Building my E‑Portfolio",
+    "section": "Key Skills Developed",
+    "text": "Key Skills Developed\n\nBuilding a multi-page Quarto website\nManaging the site using Git and publishing pages using GitHub\nEmbedding active Python code in Quarto\nUsing SCSS to customise the website style\nStructuring the website to be professional and usable"
+  },
+  {
+    "objectID": "reflection.html#main-challenges-faced-solutions-found",
+    "href": "reflection.html#main-challenges-faced-solutions-found",
+    "title": "Reflecting on Building my E‑Portfolio",
+    "section": "Main Challenges Faced & Solutions Found",
+    "text": "Main Challenges Faced & Solutions Found"
+  },
+  {
+    "objectID": "reflection.html#my-learning-experience",
+    "href": "reflection.html#my-learning-experience",
+    "title": "Reflecting on Building my E‑Portfolio",
+    "section": "My learning experience",
+    "text": "My learning experience\n\nThe Starting Point\nPrior to this project I had not worked with Quarto, VScode, GitHub, or SCSS. I found it overwhelming at first to be introduced to multiple different methods of building the site. During each lecture we were taught new terminology and methods which was difficult at first. However, we performed pratcical exercises during the classes which was a big help in developing the skills and gaining a better understanding of the concepts.\n\n\nKey Skills Developed\n\nBuilding a multi-page Quarto website\nManaging the site using Git and publishing pages using GitHub\nEmbedding active Python code in Quarto\nUsing SCSS to customise the website style\nStructuring the website to be professional and usable"
   }
 ]
