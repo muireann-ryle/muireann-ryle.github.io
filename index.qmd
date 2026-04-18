@@ -29,9 +29,24 @@ Business Analytics. </p>
 
 <div class="home-card">
 <h2 class = "light-pink-text"> My Projects </h2>
-<p>A collection of [my projects](Projects/) including coursework and analytics challenge based learning projects are available to explore.</p>
+<p>A collection of [my projects](Projects/) including coursework and challenge based learning analytics projects are available to explore.</p>
 
 </div>
 
 </div>
 
+<div class="home-grid">
+
+<div class="home-card">
+<h2 class = "light-pink-text"> My Reflection </h2>
+<p>You can read [my reflections](reflection.qmd) about the journey of creating an E-Portfolio. This includes my thoughts of the project, skills acquired, and future steps I may take.</p>
+
+</div>
+
+<div class="home-card">
+<h2 class = "light-pink-text"> Contact Me! </h2>
+<p>You can find the best ways to [contact me](contact.qmd) to chat more about my academic journey, interests, career development, or more.</p>
+
+</div>
+
+</div>
