@@ -14,15 +14,38 @@ new terminology and methods which was difficult at first. However, we performed 
 during the classes which was a big help in developing the skills and gaining a better understanding of the
 concepts. 
 
-### Key Skills Developed
-- Building a multi-page Quarto website
-- Managing the site using Git and publishing pages using GitHub
-- Embedding active Python code in Quarto
-- Using SCSS to customise the website style
-- Structuring the website to be professional and usable
+### Key Skills Developed:
+* Building a multi-page Quarto website
+* Managing the site using Git and publishing pages using GitHub
+* Embedding active Python code in Quarto
+* Using SCSS to customise the website style
+* Structuring the website to be professional and usable
+
+### Key Resources used
+The main resource which helped me throughout the building process were the lecture slides provided
+by our lecturer, Damien Dupré. These helpful resources can be found on Damien's own website [here](https://damien-dupre.github.io/courses/BAA1104.html).
 
 
+<div class="diagram-wrapper">
+<h2 class = "light-pink-text"> The Development Process! </h2>
 
+```{mermaid}
+flowchart TD
+    classDef pink fill:#f9e4ec,stroke:#d4789f,color:#1b2a4a
+    classDef navy fill:#1b2a4a,stroke:#1b2a4a,color:#ffffff
+    classDef endNode fill:#d4789f,stroke:#d4789f,color:#ffffff
 
+    A[Set up GitHub repo and rendered Quarto site] --> B[Designed site structure using template]
+    B --> C[Created About page with images & icons]
+    C --> D[Added logo and favicon]
+    D --> E[Customised design using styles.scss]
+    E --> F[Added Projects section with grid & Python code]
+    F --> G[Added Reflections & Contact pages with icons & diagram]
+    G --> H[Ensured navbar & footer with CV, LinkedIn & GitHub links]
+    H --> I{E-Portfolio available online!}
 
+    class A,B,C,D,E,F,G,H pink
+    class I endNode
+```
 
+</div>

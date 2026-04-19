@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bc9832dc777c0473bf4a0f0865b6166a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c7ae98784610153e773d04216bdd84e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,6 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -136,7 +139,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#my-learning-experience" id="toc-my-learning-experience" class="nav-link active" data-scroll-target="#my-learning-experience">My learning experience</a>
   <ul class="collapse">
   <li><a href="#the-starting-point" id="toc-the-starting-point" class="nav-link" data-scroll-target="#the-starting-point">The Starting Point</a></li>
-  <li><a href="#key-skills-developed" id="toc-key-skills-developed" class="nav-link" data-scroll-target="#key-skills-developed">Key Skills Developed</a></li>
+  <li><a href="#key-skills-developed" id="toc-key-skills-developed" class="nav-link" data-scroll-target="#key-skills-developed">Key Skills Developed:</a></li>
+  <li><a href="#key-resources-used" id="toc-key-resources-used" class="nav-link" data-scroll-target="#key-resources-used">Key Resources used</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -171,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Prior to this project I had not worked with Quarto, VScode, GitHub, or SCSS. I found it overwhelming at first to be introduced to multiple different methods of building the site. During each lecture we were taught new terminology and methods which was difficult at first. However, we performed pratcical exercises during the classes which was a big help in developing the skills and gaining a better understanding of the concepts.</p>
 </section>
 <section id="key-skills-developed" class="level3">
-<h3 class="anchored" data-anchor-id="key-skills-developed">Key Skills Developed</h3>
+<h3 class="anchored" data-anchor-id="key-skills-developed">Key Skills Developed:</h3>
 <ul>
 <li>Building a multi-page Quarto website</li>
 <li>Managing the site using Git and publishing pages using GitHub</li>
@@ -179,6 +183,42 @@ ul.task-list li input[type="checkbox"] {
 <li>Using SCSS to customise the website style</li>
 <li>Structuring the website to be professional and usable</li>
 </ul>
+</section>
+<section id="key-resources-used" class="level3">
+<h3 class="anchored">Key Resources used</h3>
+<p>The main resource which helped me throughout the building process were the lecture slides provided by our lecturer, Damien Dupré. These helpful resources can be found on Damien’s own website <a href="https://damien-dupre.github.io/courses/BAA1104.html">here</a>.</p>
+<div class="diagram-wrapper">
+<h2 class="light-pink-text anchored" data-anchor-id="key-resources-used">
+The Development Process!
+</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    classDef pink fill:#f9e4ec,stroke:#d4789f,color:#1b2a4a
+    classDef navy fill:#1b2a4a,stroke:#1b2a4a,color:#ffffff
+    classDef endNode fill:#d4789f,stroke:#d4789f,color:#ffffff
+
+    A[Set up GitHub repo and rendered Quarto site] --&gt; B[Designed site structure using template]
+    B --&gt; C[Created About page with images &amp; icons]
+    C --&gt; D[Added logo and favicon]
+    D --&gt; E[Customised design using styles.scss]
+    E --&gt; F[Added Projects section with grid &amp; Python code]
+    F --&gt; G[Added Reflections &amp; Contact pages with icons &amp; diagram]
+    G --&gt; H[Ensured navbar &amp; footer with CV, LinkedIn &amp; GitHub links]
+    H --&gt; I{E-Portfolio available online!}
+
+    class A,B,C,D,E,F,G,H pink
+    class I endNode
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
 
 
 </section>
