@@ -20,17 +20,18 @@ about:
 
 ---
 
-I am currently pursuing a MSc in Business Analytics at Dublin City University where I 
-am developing my understanding of data analytics and business practice through challenge
-based learning projects. The course includes modules such as Advanced Analytics Techniques, 
-Business strategy, and an Applied Deep Learning Project.
+I am currently pursuing a ***MSc in Business Analytics*** at Dublin City University where I 
+am developing my understanding of **data analytics** and **business practice** through challenge
+based learning projects. The course includes modules such as **Advanced Analytics Techniques**, 
+**Business strategy**, and an **Applied Deep Learning Project**.
 
-After graduating with a First Class Honours in BSc in Psychology and Mathematics, I decided
+After graduating with a *First Class Honours* in BSc in Psychology and Mathematics, I decided
 to continue my learning journey and broaden my knowledge in an area I am particularly interested
-in, data analytics. Using tools such as Python, SQL, and PowerBI, I have been able to develop 
+in, data analytics. Using tools such as Python, SQL, and PowerBI, I have been able to work on 
 research projects on different business challenges and cases.
 
-My Applied Deep Learning Project is a group project focused on developing a classifier for
-feminine slurs in Portuguese tweets towards footballers.
-
+:::{.callout-note}
+My current work is an Applied Deep Learning Project focused on developing a classifier for
+hate speech in Portuguese tweets towards footballers!
+:::
 
