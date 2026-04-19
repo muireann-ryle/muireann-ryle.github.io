@@ -17,8 +17,8 @@ from you!
 
 The best places to find me online:
 
-- [LinkedIn](https://www.linkedin.com/in/muireann-ryle-2797242a0/)
-- [GitHub](https://github.com/muireann-ryle)
+* {{< fa brands linkedin >}} [LinkedIn](https://www.linkedin.com/in/muireann-ryle-2797242a0/)  
+* {{< fa brands github >}} [GitHub](https://github.com/muireann-ryle)  
 
 ## Quick Contact Card {{< fa star >}}
 

@@ -16,10 +16,10 @@ build predictive models for fraud amount.
 
 Before conducting EDA, I prepared the dataset by:
 
-- **Normalising continuous variables** using z-scores  
-- Calculating the **interquartile range (IQR)**  
-- Identifying **outliers** across key variables  
-- Creating additional transformed variables for analysis 
+* **Normalising continuous variables** using z-scores  
+* Calculating the **interquartile range (IQR)**  
+* Identifying **outliers** across key variables  
+* Creating additional transformed variables for analysis 
 ```{.python} 
 # Compute z-scores
 z_scores = (fraud_df[cols] - fraud_df[cols].mean()) / fraud_df[cols].std()

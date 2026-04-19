@@ -102,14 +102,14 @@
     "href": "Projects/list/project_3.html#methodology",
     "title": "Examining Happiness Across Cultures",
     "section": "Methodology",
-    "text": "Methodology\n\nData Preparation\n\nInspected for missing values and inconsistencies\n\nRemoved countries with insufficient sample sizes\n\nFiltered dataset to African and Western‑European regions\n\n\n\nConfirmatory Factor Analysis (CFA)\nCFA was used to test: - Configural invariance (same factor structure across groups)\n- Metric invariance (equal factor loadings across groups)\nFit indices included: - Chi‑Square\n- CFI\n- TLI\n- RMSEA\n- SRMR\n\n\nMeasurement Non‑Equivalence (MNE)\nTo quantify bias, the study used: - dMACS\n- SDI2 / UDI2\n- WSDI / WUDI\nThese metrics capture psychometric distance between cultures."
+    "text": "Methodology\n\nData Preparation\n\nInspected for missing values and inconsistencies\n\nRemoved countries with insufficient sample sizes\n\nFiltered dataset to African and Western‑European regions\n\n\n\nConfirmatory Factor Analysis (CFA)\nCFA was used to test: * Configural invariance (same factor structure across groups)\n* Metric invariance (equal factor loadings across groups)\nFit indices included: * Chi‑Square\n* CFI\n* TLI\n* RMSEA\n* SRMR\n\n\nMeasurement Non‑Equivalence (MNE)\nTo quantify bias, the study used: * dMACS\n* SDI2 / UDI2\n* WSDI / WUDI\nThese metrics capture psychometric distance between cultures."
   },
   {
     "objectID": "Projects/list/project_3.html#analysis-findings",
     "href": "Projects/list/project_3.html#analysis-findings",
     "title": "Examining Happiness Across Cultures",
     "section": "Analysis & Findings",
-    "text": "Analysis & Findings\n\nHappiness Scores Differed Across Countries\nAfrican countries (e.g., Kenya, Senegal) showed higher SHS means than many Western‑European countries.\nExample from Table 2:\n- Kenya SHS Combined Mean = 5.347\n- Germany SHS Combined Mean = 4.691\n\n\nMeasurement Models Did Not Hold Equally Across Cultures\n\nConfigural invariance was inconsistent\n\nMetric invariance was often violated\n\nSHS and IHS items behaved differently across African vs Western‑European groups\n\n\n\nLarge Measurement Bias Detected\nEffect size metrics showed large psychometric distances between groups, indicating that individuals with the same latent happiness levels may score differently depending on their cultural group.\n\n\nImplications\n\nSHS and IHS may not be culturally neutral\n\nCross‑cultural comparisons of happiness may be misleading\n\nThere is a need for culturally adapted or newly developed happiness measures"
+    "text": "Analysis & Findings\n\nHappiness Scores Differed Across Countries\nAfrican countries (e.g., Kenya, Senegal) showed higher SHS means than many Western‑European countries.\nExample from Table 2:\n* Kenya SHS Combined Mean = 5.347\n* Germany SHS Combined Mean = 4.691\n\n\nMeasurement Models Did Not Hold Equally Across Cultures\n\nConfigural invariance was inconsistent\n\nMetric invariance was often violated\n\nSHS and IHS items behaved differently across African vs Western‑European groups\n\n\n\nLarge Measurement Bias Detected\nEffect size metrics showed large psychometric distances between groups, indicating that individuals with the same latent happiness levels may score differently depending on their cultural group.\n\n\nImplications\n\nSHS and IHS may not be culturally neutral\n\nCross‑cultural comparisons of happiness may be misleading\n\nThere is a need for culturally adapted or newly developed happiness measures"
   },
   {
     "objectID": "Projects/list/project_3.html#discussion",
@@ -263,7 +263,7 @@
     "href": "contact.html",
     "title": "Contact Me",
     "section": "",
-    "text": "Whether you would like to discuss analytics, psychology, tennis, or anything in between, I’d love to hear from you!\n\n\n\n\n\n\n\n\nNote\n\n\n\nEmail: muireann.ryle2@mail.dcu.ie\n\n\n\n\n\n\nThe best places to find me online:\n\nLinkedIn\nGitHub\n\n\n\n\n\n\n\nBusiness Analytics | Psychology | Mathematics\n\n\n Dublin / Kildare\n\n\n muireann.ryle2@mail.dcu.ie"
+    "text": "Whether you would like to discuss analytics, psychology, tennis, or anything in between, I’d love to hear from you!\n\n\n\n\n\n\n\n\nNote\n\n\n\nEmail: muireann.ryle2@mail.dcu.ie\n\n\n\n\n\n\nThe best places to find me online:\n\n LinkedIn\n\n GitHub\n\n\n\n\n\n\n\nBusiness Analytics | Psychology | Mathematics\n\n\n Dublin / Kildare\n\n\n muireann.ryle2@mail.dcu.ie"
   },
   {
     "objectID": "contact.html#email",
@@ -277,7 +277,7 @@
     "href": "contact.html#social-links",
     "title": "Contact Me",
     "section": "",
-    "text": "The best places to find me online:\n\nLinkedIn\nGitHub"
+    "text": "The best places to find me online:\n\n LinkedIn\n\n GitHub"
   },
   {
     "objectID": "contact.html#quick-contact-card",

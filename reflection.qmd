@@ -29,6 +29,7 @@ by our lecturer, Damien Dupré. These helpful resources can be found on Damien's
 <div class="diagram-wrapper">
 <h2 class = "light-pink-text"> The Development Process! </h2>
 
+
 ```{mermaid}
 flowchart TD
     classDef pink fill:#f9e4ec,stroke:#d4789f,color:#1b2a4a
