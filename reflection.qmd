@@ -50,3 +50,11 @@ flowchart TD
 ```
 
 </div>
+
+## Concluding Thoughts {{< fa face-smile >}}
+This has been an incredibly **useful** and **fun** experience over the past three months. I thoruoughly enjoyed
+engaging in the lecture material and other resources to build an **informative**, **creative**, and **professional** 
+E-Portfolio. This project has allowed me to develop a good understanding of **quarto**, **github**, **VS code**,
+**html**, and other areas. I enjoyed testing out different **styles**, **themes**, and **ideas** to ultimately
+choose the one that reflects my journey best! I hope to continue to grow my knowledge in this area
+and make more improvements and changes as my experience develops.
