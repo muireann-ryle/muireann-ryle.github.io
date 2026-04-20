@@ -27,7 +27,7 @@ based learning projects. The course includes modules such as **Advanced Analytic
 
 After graduating with a *First Class Honours* in BSc in Psychology and Mathematics, I decided
 to continue my learning journey and broaden my knowledge in an area I am particularly interested
-in, data analytics. Using tools such as Python, SQL, and PowerBI, I have been able to work on 
+in, data analytics. Using tools such as **Python**, **SQL**, and **PowerBI**, I have been able to work on 
 research projects on different business challenges and cases.
 
 :::{.callout-note}
