@@ -20,7 +20,7 @@ The best places to find me online:
 * {{< fa brands linkedin >}} [LinkedIn](https://www.linkedin.com/in/muireann-ryle-2797242a0/)  
 * {{< fa brands github >}} [GitHub](https://github.com/muireann-ryle)  
 
-## Quick Contact Card {{< fa star >}}
+## Contact Card {{< fa star >}}
 
 <div style="border: 1px solid #ddd; padding: 1rem; border-radius: 8px; max-width: 350px;">
 <h3> Muireann Ryle</h3>

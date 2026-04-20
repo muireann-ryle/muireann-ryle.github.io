@@ -24,6 +24,9 @@ concepts.
 ### Key Resources used
 The main resource which helped me throughout the building process were the lecture slides provided
 by our lecturer, Damien Dupré. These helpful resources can be found on Damien's own website [here](https://damien-dupre.github.io/courses/BAA1104.html).
+I also used some other resources, particularly for more complex areas. To help with the design of the 
+mermaid diagram below I found the site [here](https://jimmywongiot.com/2025/08/28/how-to-use-mermaid-in-visual-studio-code-a-step-by-step-guide-for-developers/)
+very useful.
 
 
 <div class="diagram-wrapper">
